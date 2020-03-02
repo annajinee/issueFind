@@ -53,7 +53,6 @@
                         width: [2, 2, 2, 2, 2, 2, 2]
                     },
                     title: {
-                        text: '회사코드'
                     },
                     dataLabels: {
                         enabled: true,
