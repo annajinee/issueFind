@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c44bcc2-bca7-4a8b-8d15-418f46ec6fe7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_services/chart.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/portfolio/quantimg/bi_menu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/portfolio/quantimg/bi_width.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/portfolio/quantimg/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_helpers/fake-backend.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_helpers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/_services/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/LineChart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/LineChart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/TopMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/TopMenu.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,13 +49,14 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/home/main" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/_services" />
       <recent name="$PROJECT_DIR$/src/common" />
       <recent name="C:\Users\annajk\Desktop\vue-vuex-jwt-authentication-example" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img/portfolio/quantimg" />
+      <recent name="$PROJECT_DIR$/src/home/main" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -94,7 +95,8 @@
       <workItem from="1581641397715" duration="711000" />
       <workItem from="1581857244697" duration="619000" />
       <workItem from="1582025852817" duration="16707000" />
-      <workItem from="1583037677419" duration="4739000" />
+      <workItem from="1583037677419" duration="4842000" />
+      <workItem from="1583155389434" duration="2330000" />
     </task>
     <task id="LOCAL-00001" summary="진행중..">
       <created>1578994574942</created>
@@ -152,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583037798389</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="진행중..">
+      <created>1583109567372</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1583109567372</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -176,11 +185,11 @@
       <screen x="0" y="23" width="1440" height="812" />
     </state>
     <state x="488" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.812@0.23.1440.812" timestamp="1583046247767" />
-    <state x="314" y="31" key="CommitChangelistDialog2" timestamp="1583037798115">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state x="314" y="31" key="CommitChangelistDialog2" timestamp="1583158245368">
+      <screen x="0" y="23" width="1440" height="812" />
     </state>
     <state x="314" y="31" key="CommitChangelistDialog2/0.23.1440.811@0.23.1440.811" timestamp="1583037798115" />
-    <state x="314" y="31" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1581406381093" />
+    <state x="314" y="31" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1583158245368" />
     <state x="314" y="31" key="CommitChangelistDialog2/0.23.1440.814@0.23.1440.814" timestamp="1582441844399" />
     <state x="314" y="31" key="CommitChangelistDialog2/0.23.1440.816@0.23.1440.816" timestamp="1582441765470" />
     <state width="1419" height="208" key="GridCell.Tab.0.bottom" timestamp="1581308179793">
@@ -207,15 +216,16 @@
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state x="433" y="151" key="MultipleFileMergeDialog/0.23.1440.814@0.23.1440.814" timestamp="1582441833117" />
-    <state x="504" y="146" key="RollbackChangesDialog" timestamp="1581398545878">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state x="504" y="146" key="RollbackChangesDialog" timestamp="1583157187531">
+      <screen x="0" y="23" width="1440" height="812" />
     </state>
     <state x="504" y="146" key="RollbackChangesDialog/0.23.1440.811@0.23.1440.811" timestamp="1581398545878" />
-    <state x="320" y="168" key="Vcs.Push.Dialog.v2" timestamp="1583038092560">
-      <screen x="0" y="23" width="1440" height="811" />
+    <state x="504" y="146" key="RollbackChangesDialog/0.23.1440.812@0.23.1440.812" timestamp="1583157187531" />
+    <state x="320" y="168" key="Vcs.Push.Dialog.v2" timestamp="1583109573122">
+      <screen x="0" y="23" width="1440" height="812" />
     </state>
     <state x="320" y="168" key="Vcs.Push.Dialog.v2/0.23.1440.811@0.23.1440.811" timestamp="1583038092560" />
-    <state x="320" y="168" key="Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812" timestamp="1581406385786" />
+    <state x="320" y="168" key="Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812" timestamp="1583109573122" />
     <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.23.1440.814@0.23.1440.814" timestamp="1582441852570" />
     <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.23.1440.816@0.23.1440.816" timestamp="1582441770174" />
     <state x="420" y="228" key="git4idea.merge.GitPullDialog" timestamp="1582440445721">
