@@ -1,125 +1,278 @@
-`
 <template>
     <section class="page-section" id="contact">
         <div class="container">
             <div class="justify-content-center">
                 <div class="row mt-2">
-                <div class="col-md-12 mb-2">
-                    <p class="font-weight-bolder">실시간 이슈 [종목분석]</p>
-                    <hr class="dropdown-divider">
-                </div>
-                <div class="col-lg-3">
-                    <button class="btn btn-outline-danger js-scroll-trigger col-md-8 btn-sm mb-2">이슈/테마 검색</button>
-                </div>
-                <div class="col-lg-4">
-                    <button class="btn btn-outline-danger js-scroll-trigger col-md-2 mr-1 btn-sm mb-2">일</button>
-                    <button class="btn btn-outline-danger js-scroll-trigger col-md-2 mr-1 btn-sm mb-2">주</button>
-                    <button class="btn btn-outline-danger js-scroll-trigger col-md-2 mr-1 btn-sm mb-2">1개월</button>
-                    <button class="btn btn-outline-danger js-scroll-trigger col-md-2 btn-sm mb-2">최대</button>
-                </div>
-                <div class="col-lg-5">
-                    종목검색
-                    <i class="fas fa-search mb-2 ml-1"></i>
-                    <input type="text" placeholder="종목명 or 종목코드를 입력하세요" class="form-control-sm col-md-6 mb-2"/>
-                    <button class="btn-sm btn-dark js-scroll-trigger col-md-3 btn-sm mb-2 ml-2">검색하기</button>
-                </div>
+                    <div class="col-md-12 mb-2">
+                        <p class="font-weight-bolder">실시간 이슈</p>
+                        <hr class="dropdown-divider">
+                    </div>
+                    <div class="col-lg-5">
+                        <button class="btn btn-danger js-scroll-trigger col-md-3 btn-sm mb-2 mr-1">이슈/테마 검색</button>
+                        <button class="btn btn-danger js-scroll-trigger col-md-3 btn-sm mb-2">종목 검색</button>
+                    </div>
+                    <div class="col-lg-4">
+                        <button class="btn btn-outline-danger js-scroll-trigger col-md-2 mr-1 btn-sm mb-2">일</button>
+                        <button class="btn btn-outline-danger js-scroll-trigger col-md-2 mr-1 btn-sm mb-2">주</button>
+                        <button class="btn btn-outline-danger js-scroll-trigger col-md-2 mr-1 btn-sm mb-2">1개월</button>
+                        <button class="btn btn-outline-danger js-scroll-trigger col-md-2 btn-sm mb-2">최대</button>
+                    </div>
                 </div>
                 <hr class="dropdown-divider">
-                <div class="row mt-3">
-                <div class="col-lg-7">
-                    <ChartHeader/>
-                </div>
-                <div class="col-lg-5">
-                    <div class="row mt-3 ml-4">
-                        <button class="btn btn-outline-dark js-scroll-trigger col-sm-3 mr-2">기업뉴스</button>
-                        <button class="btn btn-outline-dark js-scroll-trigger col-sm-3 mr-2">기업공시</button>
-                        <button class="btn btn-outline-dark js-scroll-trigger col-sm-3">이슈분석</button>
-                    </div>
-                    <div class="row ml-4">
-                        <button class="btn btn-outline-info js-scroll-trigger col-sm-10 mt-3">관심업종 등록하기
-                        </button>
-                    </div>
-                </div>
-                </div>
-                <div class="col-lg-12 text-center mt-3">
-                    <LineChart/>
-                </div>
+
+
                 <div class="row mt-4">
-                    <div class="col-lg-4">
-                        <table class="table table-borderless small text-left">
-                            <thead class="border-bottom border-top">
-                            <tr>
-                                <th colspan="4">종목정보</th>
-                            </tr>
-                            </thead>
-                            <tbody class="border">
-                            <tr>
-                                <th class="font-weight-normal">전일</th>
-                                <td class="bg-light text-right font-weight-bolder">718</td>
-                                <th class="font-weight-normal">시가</th>
-                                <td class="bg-light text-right font-weight-bolder">718</td>
-                            </tr>
-                            <tr>
-                                <th class="font-weight-normal">고가</th>
-                                <td class="bg-light text-right text-danger font-weight-bolder">721</td>
-                                <th class="font-weight-normal">저가</th>
-                                <td class="bg-light text-right text-info font-weight-bolder">701</td>
-                            </tr>
-                            <tr>
-                                <th class="font-weight-normal">거래량</th>
-                                <td class="bg-light text-right font-weight-bolder">349,619</td>
-                                <th class="font-weight-normal">거래대금</th>
-                                <td class="bg-light text-right font-weight-bolder">249백</td>
-                            </tr>
-                            <tr>
-                                <th class="font-weight-normal">52주최고</th>
-                                <td class="bg-light text-right text-danger font-weight-bolder">1,235</td>
-                                <th class="font-weight-normal">52주최저</th>
-                                <td class="bg-light text-right text-info font-weight-bolder">515</td>
-                            </tr>
-                            <tr>
-                                <th class="font-weight-normal small">외인보유비중</th>
-                                <td class="bg-light text-right font-weight-bolder">3.52%</td>
-                                <th class="font-weight-normal">시가총액</th>
-                                <td class="bg-light text-right font-weight-bolder">1,134억원</td>
-                            </tr>
-                            <tr>
-                                <th class="font-weight-normal">액면가</th>
-                                <td class="bg-light text-right font-weight-bolder">500원</td>
-                                <th class="font-weight-normal">상장주식</th>
-                                <td class="bg-light text-right font-weight-bolder">158,418,281주</td>
-                            </tr>
-                            <tr>
-                                <th class="font-weight-normal">EPS*</th>
-                                <td class="bg-light text-right font-weight-bolder">-89원</td>
-                                <th class="font-weight-normal">PER*</th>
-                                <td class="bg-light text-right font-weight-bolder">-5.3배</td>
-                            </tr>
-                            <tr>
-                                <th class="font-weight-normal">BPS*</th>
-                                <td class="bg-light text-right font-weight-bolder">680원</td>
-                                <th class="font-weight-normal">PBR*</th>
-                                <td class="bg-light text-right font-weight-bolder">1.1배</td>
-                            </tr>
-                            <tr>
-                                <th class="font-weight-normal">업종</th>
-                                <td class="bg-light text-right font-weight-bolder">IT서비스</td>
-                                <th class="font-weight-normal small">배당수익률</th>
-                                <td class="bg-light text-right font-weight-bolder">-</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <div class="col-sm-8 col-md-push-3">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="row">
+                                <div class="col-sm-3">
+                                <h6 class="font-weight-bolder d-inline-block">코스피</h6>
+                                </div>
+                                <div class="text-right col-sm-9">
+                                <h6 class="color-blue d-inline-block">1,535.35</h6>&nbsp;
+                                <h6 class="color-blue d-inline-block">▼25.5</h6>&nbsp;
+                                <h6 class="color-blue d-inline-block">-0.56%</h6>
+                                </div>
+                                </div>
+                                <div class="border">
+                                    <candle-stick-chart/>
+                                </div>
+                                <div class="text-sm-center small mt-3 font-weight-bolder">
+                                    <p class="d-inline-block">뉴스  +508</p>&nbsp; |
+                                    <p class="d-inline-block">커뮤니티 +1,330</p>&nbsp; |
+                                    <p class="d-inline-block">공시 -20</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h6 class="font-weight-bolder d-inline-block">코스닥</h6>
+                                    </div>
+                                    <div class="text-right col-sm-9">
+                                        <h6 class="color-blue d-inline-block">1,535.35</h6>&nbsp;
+                                        <h6 class="color-blue d-inline-block">▼25.5</h6>&nbsp;
+                                        <h6 class="color-blue d-inline-block">-0.56%</h6>
+                                    </div>
+                                </div>
+                                <div class="border">
+                                    <candle-stick-chart/>
+                                </div>
+                                <div class="text-sm-center small mt-3 font-weight-bolder">
+                                    <p class="d-inline-block">뉴스  +508</p>&nbsp; |
+                                    <p class="d-inline-block">커뮤니티 +1,330</p>&nbsp; |
+                                    <p class="d-inline-block">공시 -20</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <h6 class="font-weight-bolder d-inline-block">코스피 이슈</h6>
+                                    </div>
+                                    <div class="text-right col-sm-8">
+                                        <h6 class="color-blue d-inline-block">1,535.35</h6>&nbsp;
+                                        <h6 class="color-blue d-inline-block">▼25.5</h6>&nbsp;
+                                        <h6 class="color-blue d-inline-block">-0.56%</h6>
+                                    </div>
+                                </div>
+                                <div class="border">
+                                    <candle-stick-chart/>
+                                </div>
+                                <div class="text-sm-center small mt-3 font-weight-bolder">
+                                    <p class="d-inline-block">뉴스  +508</p>&nbsp; |
+                                    <p class="d-inline-block">커뮤니티 +1,330</p>&nbsp; |
+                                    <p class="d-inline-block">공시 -20</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <h6 class="font-weight-bolder d-inline-block">코스닥 이슈</h6>
+                                    </div>
+                                    <div class="text-right col-sm-8">
+                                        <h6 class="color-blue d-inline-block">1,535.35</h6>&nbsp;
+                                        <h6 class="color-blue d-inline-block">▼25.5</h6>&nbsp;
+                                        <h6 class="color-blue d-inline-block">-0.56%</h6>
+                                    </div>
+                                </div>
+                                <div class="border">
+                                    <candle-stick-chart/>
+                                </div>
+                                <div class="text-sm-center small mt-3 font-weight-bolder">
+                                    <p class="d-inline-block">뉴스  +508</p>&nbsp; |
+                                    <p class="d-inline-block">커뮤니티 +1,330</p>&nbsp; |
+                                    <p class="d-inline-block">공시 -20</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-6">
+                                <table class="table table-borderless small text-left table-hover">
+                                    <thead class="border">
+                                    <tr>
+                                        <th colspan="4">코스피 종합이슈 상위 TOP 10</th>
+                                        <th class="text-right font-weight-normal"><router-link to="/signup">더보기 ></router-link></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="border">
+                                    <tr class="font-weight-bolder">
+                                        <td>순위</td>
+                                        <td>업체명</td>
+                                        <td>산업</td>
+                                        <td>이슈점수</td>
+                                        <td>등락</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-lg-6">
+                                <table class="table table-borderless small text-left table-hover">
+                                    <thead class="border">
+                                    <tr>
+                                        <th colspan="4">코스닥 종합이슈 상위 TOP 10</th>
+                                        <th class="text-right font-weight-normal"><router-link to="/signup">더보기 ></router-link></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="border">
+                                    <tr class="font-weight-bolder">
+                                        <th></th>
+                                        <td>업체명</td>
+                                        <td>산업</td>
+                                        <td>이슈점수</td>
+                                        <td>등락</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>삼성전자</td>
+                                        <td>제조</td>
+                                        <td>89</td>
+                                        <td>+5.8%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-sm-4 col-md-pull-9">
+                        <p class="font-weight-bolder d-inline-block m-0">전일 주요 업종/소스별 이슈</p>
+                        <p class="text-right font-weight-normal small"><router-link to="/signup">더보기 ></router-link></p>
+                        <div class="text-sm-center">
+                        <button class="btn btn-dark js-scroll-trigger col-md-3 mr-2 btn-sm mb-2">웹 이슈</button>
+                        <button class="btn btn-dark js-scroll-trigger col-md-3 mr-2 btn-sm mb-2">뉴스 이슈</button>
+                        <button class="btn btn-dark js-scroll-trigger col-md-3 btn-sm mb-2">공시 이슈</button>
+                        </div>
+                        <hr class="dropdown-divider">
                         <table class="table table-borderless small text-left table-hover">
-                            <thead class="border-bottom border-top">
-                            <tr>
-                                <th colspan="5">연관이슈 종목</th>
-                            </tr>
-                            </thead>
-                            <tbody class="border">
+                            <tbody class="bg-light">
                             <tr class="font-weight-bolder">
-                                <th></th>
+                                <td>순위</td>
                                 <td>업체명</td>
                                 <td>산업</td>
                                 <td>이슈점수</td>
@@ -127,120 +280,108 @@
                             </tr>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>@mdo</td>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                                <td>@fat</td>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                <td>@twitter</td>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
                             </tr>
                             <tr>
                                 <th scope="row">4</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                <td>@twitter</td>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
                             </tr>
                             <tr>
                                 <th scope="row">4</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                <td>@twitter</td>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
                             </tr>
                             <tr>
                                 <th scope="row">4</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                <td>@twitter</td>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
                             </tr>
                             <tr>
                                 <th scope="row">4</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                <td>@twitter</td>
-                            </tr><tr>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
+                            </tr>
+                            <tr>
                                 <th scope="row">4</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                                <td>@twitter</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="col-lg-4">
-                        <table class="table table-borderless small text-left table-hover">
-                            <thead class="border-bottom border-top">
-                            <tr>
-                                <th colspan="4">시뮬레이션 수익률</th>
-                            </tr>
-                            </thead>
-                            <tr>
-                                <th colspan="4" class="font-weight-normal">기준일 - 2019.02.03 &nbsp;수익률 <p class="text-danger d-inline-block m-0 font-weight-bolder">135.4%(보유중)</p></th>
-                            </tr>
-                            <tbody class="border">
-                            <tr>
-                                <td>2019.08.08 00:00</td>
-                                <td>매수</td>
-                                <td>103,000</td>
-                                <td>100%</td>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
                             </tr>
                             <tr>
-                                <td>2019.08.08 00:00</td>
-                                <td>매수</td>
-                                <td>103,000</td>
-                                <td>100%</td>
+                                <th scope="row">4</th>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
                             </tr>
                             <tr>
-                                <td>2019.08.08 00:00</td>
-                                <td>매수</td>
-                                <td>103,000</td>
-                                <td>100%</td>
+                                <th scope="row">4</th>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
                             </tr>
                             <tr>
-                                <td>2019.08.08 00:00</td>
-                                <td>매수</td>
-                                <td>103,000</td>
-                                <td>100%</td>
+                                <th scope="row">4</th>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
                             </tr>
                             <tr>
-                                <td>2019.08.08 00:00</td>
-                                <td>매수</td>
-                                <td>103,000</td>
-                                <td>100%</td>
+                                <th scope="row">4</th>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
                             </tr>
                             <tr>
-                                <td>2019.08.08 00:00</td>
-                                <td>매수</td>
-                                <td>103,000</td>
-                                <td>100%</td>
+                                <th scope="row">4</th>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
                             </tr>
                             <tr>
-                                <td>2019.08.08 00:00</td>
-                                <td>매수</td>
-                                <td>103,000</td>
-                                <td>100%</td>
+                                <th scope="row">4</th>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
                             </tr>
                             <tr>
-                                <td>2019.08.08 00:00</td>
-                                <td>매수</td>
-                                <td>103,000</td>
-                                <td>100%</td>
+                                <th scope="row">4</th>
+                                <td>삼성전자</td>
+                                <td>제조</td>
+                                <td>89</td>
+                                <td>+5.8%</td>
                             </tr>
                             </tbody>
                         </table>
@@ -256,6 +397,8 @@
     import ChartHeader from "../common/ChartHeader";
     import YAxisChart from "../common/YAxisChart";
     import LineChart from "../common/LineChart";
+    import CandleStickChart from "../common/CandleStickChart";
+
 
     export default {
         name: 'RealTimeIssuePage',
@@ -263,12 +406,15 @@
             MixedChart,
             YAxisChart,
             LineChart,
-            ChartHeader
+            ChartHeader,
+            CandleStickChart
         }
     };
 </script>
 
 <style scoped>
-
+    .color-blue {
+        color: #045FB4;
+    }
 </style>
 `
