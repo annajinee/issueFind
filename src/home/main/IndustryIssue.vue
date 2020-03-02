@@ -4,110 +4,179 @@
 <template>
     <div class="container">
         <section class="page-item" id="services">
-            <h2 class="text-primary mt-5 pb-3">Social Index</h2>
+            <h3 class="font-weight-bolder mt-5 pb-3 text-danger">Social Index</h3>
             <div class="row">
                 <div class="col-lg-4">
-                    <h5 class="text-justify mt-0 pb-3">지난주 업체별 급등 이슈</h5>
+                    <h6 class="font-weight-bolder mt-0 pb-3">지난주 업체별 급등 이슈</h6>
                 </div>
                 <div class="col-lg-4">
-                    <h5 class="text-justify mt-0 pb-3">월별 업체별 급등 이슈와 주가</h5>
+                    <h6 class="font-weight-bolder mt-0 pb-3">월별 업체별 급등 이슈와 주가</h6>
             </div>
                 <div class="col-lg-4">
                 </div>
                 <div class="col-lg-4">
-                    <table class="table table-striped small text-center table-hover">
-                        <thead>
-                        <tr>
-                            <th scope="col">순위</th>
-                            <th scope="col">업체명</th>
-                            <th scope="col">산업</th>
-                            <th scope="col">이슈점수</th>
-                            <th scope="col">등락</th>
+                    <table class="table table-borderless small text-left table-hover">
+                        <tbody class="bg-light">
+                        <tr class="font-weight-bolder">
+                            <td>순위</td>
+                            <td>업체명</td>
+                            <td>산업</td>
+                            <td>이슈점수</td>
+                            <td>등락</td>
                         </tr>
-                        </thead>
-                        <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>@fat</td>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
                         </tr>
                         <tr>
                             <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
                         </tr>
                         <tr>
                             <th scope="row">4</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
                         </tr>
                         <tr>
                             <th scope="row">4</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
                         </tr>
                         <tr>
                             <th scope="row">4</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
                         </tr>
                         <tr>
                             <th scope="row">4</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
-                        </tr><tr>
-                            <th scope="row">4</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
                         </tr>
                         <tr>
                             <th scope="row">4</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>삼성전자</td>
+                            <td>제조</td>
+                            <td>89</td>
+                            <td>+5.8%</td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="col-lg-4">
                     <div>
-                        <YAxisChart/>
+                        <candle-stick-chart/>
                         <chart-header/>
                     </div>
                     <div>
-                        <YAxisChart/>
+                        <candle-stick-chart/>
                         <chart-header/>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div>
-                        <YAxisChart/>
+                        <candle-stick-chart/>
                         <chart-header/>
                     </div>
                     <div>
-                        <YAxisChart/>
+                        <candle-stick-chart/>
                         <chart-header/>
                     </div>
                 </div>

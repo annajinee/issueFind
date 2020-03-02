@@ -43,23 +43,23 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <div class="dropdown show">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                               id="serviceGuideMenuLink" aria-haspopup="true" aria-expanded="false">이용 가이드</a>
-                            <div class="dropdown-menu" aria-labelledby="serviceGuideMenuLink">
-                                <a class="dropdown-item">
-                                    <router-link to="/data/usage">데이터활용</router-link>
-                                </a>
-                                <a class="dropdown-item">
-                                    <router-link to="/share/profit">수익인증</router-link>
-                                </a>
-                                <a class="dropdown-item">
-                                    <router-link to="/qna">Q&A</router-link>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
+<!--                    <li class="nav-item">-->
+<!--                        <div class="dropdown show">-->
+<!--                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"-->
+<!--                               id="serviceGuideMenuLink" aria-haspopup="true" aria-expanded="false">이용 가이드</a>-->
+<!--                            <div class="dropdown-menu" aria-labelledby="serviceGuideMenuLink">-->
+<!--                                <a class="dropdown-item">-->
+<!--                                    <router-link to="/data/usage">데이터활용</router-link>-->
+<!--                                </a>-->
+<!--                                <a class="dropdown-item">-->
+<!--                                    <router-link to="/share/profit">수익인증</router-link>-->
+<!--                                </a>-->
+<!--                                <a class="dropdown-item">-->
+<!--                                    <router-link to="/qna">Q&A</router-link>-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
                     <li class="nav-item">
                         <div class="dropdown show">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
