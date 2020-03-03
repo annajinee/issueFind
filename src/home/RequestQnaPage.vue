@@ -13,20 +13,19 @@
                            style="margin-bottom: 10px"/>
                     <input type="text" class="form-control" placeholder="전화번호를 숫자만 입력하세요"
                            style="margin-bottom: 10px"/>
-                    <table>
-                        <td>
+                   <div class="row">
+                       <div class="col-md-8">
                             <input type="text" class="form-control" placeholder="인증번호 입력"/>
-                        </td>
-                        <td style="padding-left: 10px">
-                            <a class="btn btn-dark btn-group-sm" href="#about">인증번호 받기</a>
-                        </td>
-                    </table>
+                       </div>
+                       <div class="col-md-4">
+                            <a class="btn btn-dark btn-group-sm col-md-12" href="#about">인증번호 받기</a>
+                       </div>
+                   </div>
                     <div class="m-3">
                         <input type="checkbox" name="chk_info" value="agreePrivate">개인정보 제공 및 이용동의
-                        <a class="js-scroll-trigger ml-3" href="#about">자세히
-                            보기</a>
+                        <a class="js-scroll-trigger ml-3" href="#about">자세히 보기 ></a>
                     </div>
-                    <a class="btn btn-primary btn-lg js-scroll-trigger col-lg-12 mt-1" href="#about">문의하기</a>
+                    <a class="btn btn-danger btn-lg js-scroll-trigger col-lg-12 mt-1" href="#about">문의하기</a>
                 </div>
             </div>
         </div>

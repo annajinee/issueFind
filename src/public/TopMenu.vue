@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger">
-                <router-link to="/"><img src="img/portfolio/quantimg/bi_menu.png" style="width: 30%"/></router-link>
+                <router-link to="/"><img src="img/portfolio/quantimg/bi_menu.png" style="width: 25%"/></router-link>
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                     data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -78,7 +78,7 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                                id="myMenuLink" aria-haspopup="true" aria-expanded="false" v-if="logIn">마이 페이지</a>
                             <a class="nav-link" href="#" id="logInLink" v-if="!logIn">
-                                <router-link to="/login">로그인</router-link>
+                                <router-link to="/login" >로그인</router-link>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="myMenuLink" v-if="logIn">
                                 <a class="dropdown-item">

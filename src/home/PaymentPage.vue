@@ -19,8 +19,8 @@
                 <thead>
                 <tr>
                     <th scope="col">기간</th>
-                    <th scope="col">실버-1개</th>
-                    <th scope="col">골드-6개</th>
+                    <th scope="col">실버-1개월</th>
+                    <th scope="col">골드-6개월</th>
                     <th scope="col">프리미엄-1년</th>
                 </tr>
                 </thead>

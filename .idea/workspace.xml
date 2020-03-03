@@ -2,9 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c44bcc2-bca7-4a8b-8d15-418f46ec6fe7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/portfolio/quantimg/payment_price.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/portfolio/quantimg/office.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/portfolio/service/intro_phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/portfolio/service/service_mobile1,5x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/portfolio/service/service_pc1,5x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/portfolio/slidebanner/Banner1-test@1,5x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/portfolio/slidebanner/Banner1_1,5x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/portfolio/slidebanner/Banner3-test@1,5x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/portfolio/slidebanner/Banner3_1,5x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/portfolio/slidebanner/Banner4-test@1,5x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/portfolio/slidebanner/Banner4_1,5x.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio/fullsize/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio/fullsize/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio/fullsize/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio/fullsize/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio/fullsize/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio/fullsize/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio/thumbnails/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio/thumbnails/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio/thumbnails/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio/thumbnails/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio/thumbnails/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/portfolio/thumbnails/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/IntroPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/IntroPage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/home/PaymentPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/PaymentPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/RequestQnaPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/RequestQnaPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/ServicePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/ServicePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/main/Qna.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/main/Qna.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home/main/TopSlide.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/main/TopSlide.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login/SignUp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/SignUp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/TopMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/TopMenu.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,14 +75,16 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img/portfolio/slidebanner" />
       <recent name="$PROJECT_DIR$/img/portfolio/quantimg" />
       <recent name="$PROJECT_DIR$/src/home/main" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/img/portfolio/quantimg" />
+      <recent name="$PROJECT_DIR$/img/portfolio/service" />
+      <recent name="$PROJECT_DIR$/img/portfolio/slidebanner" />
       <recent name="$PROJECT_DIR$/src/_services" />
       <recent name="$PROJECT_DIR$/src/common" />
-      <recent name="C:\Users\annajk\Desktop\vue-vuex-jwt-authentication-example" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -94,7 +125,7 @@
       <workItem from="1582025852817" duration="16707000" />
       <workItem from="1583037677419" duration="4842000" />
       <workItem from="1583155389434" duration="17435000" />
-      <workItem from="1583237131720" duration="1501000" />
+      <workItem from="1583237131720" duration="10052000" />
     </task>
     <task id="LOCAL-00001" summary="진행중..">
       <created>1578994574942</created>
@@ -194,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583173518703</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="진행중..">
+      <created>1583238679221</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1583238679221</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -214,15 +252,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="진행중.." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583046247767">
+    <state x="488" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583239013831">
       <screen x="0" y="23" width="1440" height="812" />
     </state>
-    <state x="488" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.812@0.23.1440.812" timestamp="1583046247767" />
-    <state x="314" y="31" key="CommitChangelistDialog2" timestamp="1583173518473">
-      <screen x="0" y="23" width="1440" height="814" />
+    <state x="488" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.812@0.23.1440.812" timestamp="1583239013831" />
+    <state x="314" y="31" key="CommitChangelistDialog2" timestamp="1583238678944">
+      <screen x="0" y="23" width="1440" height="812" />
     </state>
     <state x="314" y="31" key="CommitChangelistDialog2/0.23.1440.811@0.23.1440.811" timestamp="1583037798115" />
-    <state x="314" y="31" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1583170004417" />
+    <state x="314" y="31" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1583238678944" />
     <state x="314" y="31" key="CommitChangelistDialog2/0.23.1440.814@0.23.1440.814" timestamp="1583173518473" />
     <state x="314" y="31" key="CommitChangelistDialog2/0.23.1440.816@0.23.1440.816" timestamp="1582441765470" />
     <state width="1419" height="208" key="GridCell.Tab.0.bottom" timestamp="1581308179793">
@@ -254,11 +292,11 @@
     </state>
     <state x="504" y="146" key="RollbackChangesDialog/0.23.1440.811@0.23.1440.811" timestamp="1581398545878" />
     <state x="504" y="146" key="RollbackChangesDialog/0.23.1440.812@0.23.1440.812" timestamp="1583157187531" />
-    <state x="320" y="169" key="Vcs.Push.Dialog.v2" timestamp="1583173523220">
-      <screen x="0" y="23" width="1440" height="814" />
+    <state x="320" y="168" key="Vcs.Push.Dialog.v2" timestamp="1583238683066">
+      <screen x="0" y="23" width="1440" height="812" />
     </state>
     <state x="320" y="168" key="Vcs.Push.Dialog.v2/0.23.1440.811@0.23.1440.811" timestamp="1583038092560" />
-    <state x="320" y="168" key="Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812" timestamp="1583170008496" />
+    <state x="320" y="168" key="Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812" timestamp="1583238683066" />
     <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.23.1440.814@0.23.1440.814" timestamp="1583173523220" />
     <state x="320" y="169" key="Vcs.Push.Dialog.v2/0.23.1440.816@0.23.1440.816" timestamp="1582441770174" />
     <state x="420" y="228" key="git4idea.merge.GitPullDialog" timestamp="1582440445721">
@@ -324,7 +362,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/home/main/Qna.vue</url>
-          <line>48</line>
+          <line>50</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

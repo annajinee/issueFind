@@ -5,14 +5,14 @@
     <div id="demo" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner"> <!-- 슬라이드 쇼 -->
             <div class="carousel-item active"> <!--가로--> <img class="d-block w-100"
-                                                              src="https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                                                              src="img/portfolio/slidebanner/Banner1-test@1,5x.png"
                                                               alt="First slide">
             </div>
             <div class="carousel-item"><img class="d-block w-100"
-                                            src="https://images.pexels.com/photos/2355519/pexels-photo-2355519.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                                            src="img/portfolio/slidebanner/Banner3-test@1,5x.png"
                                             alt="Second slide"></div>
             <div class="carousel-item"><img class="d-block w-100"
-                                            src="https://images.pexels.com/photos/2544554/pexels-photo-2544554.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+                                            src="img/portfolio/slidebanner/Banner4-test@1,5x.png"
                                             alt="Third slide"></div> <!-- / 슬라이드 쇼 끝 --> <!-- 왼쪽 오른쪽 화살표 버튼 --> <a
                     class="carousel-control-prev" href="#demo" data-slide="prev"> <span
                     class="carousel-control-prev-icon" aria-hidden="true"></span> <!-- <span>Previous</span> -->
