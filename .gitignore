@@ -1,1 +1,7 @@
 *.log
+# IntelliJ
+*.iws
+*.iml
+/.idea/
+/target/
+/deploy/

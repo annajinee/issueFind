@@ -10,10 +10,11 @@ export const chartService = {
 function getChartInfo() {
     const requestOptions = {
         method: 'GET',
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'}
     };
     console.log('getChartInfo왔음=======');
-    return fetch(`${config.apiUrl}/stock/083660`, requestOptions).then(handleResponse);
+    return fetch(`${config.apiUrl}/stock/083660`, requestOptions);
 }
 
 function handleResponse(response) {

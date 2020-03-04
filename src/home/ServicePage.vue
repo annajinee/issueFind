@@ -1,7 +1,11 @@
 <template>
-    <section class="page-section ml-5 mr-5">
-        <img src="img/portfolio/service/service_pc1,5x.png" class="img-fluid"/>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+    <section class="page-section">
+        <img src="/img/portfolio/service/service_pc.png" class="img-fluid"/>
     </section>
+        </div>
+    </div>
 </template>
 
 <script>
