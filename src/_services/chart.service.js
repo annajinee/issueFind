@@ -14,7 +14,7 @@ function getChartInfo() {
             'Access-Control-Allow-Origin': '*'}
     };
     console.log('getChartInfo왔음=======');
-    return fetch(`${config.apiUrl}/stock/083660`, requestOptions);
+    return fetch(`${config.apiUrl}/api/stock/083660`, requestOptions);
 }
 
 function handleResponse(response) {
