@@ -82,16 +82,20 @@
         },
         created() {
             // 뷰가 생성되고 데이터가 이미 감시 되고 있을 때 데이터를 가져온다.
-            this.chartData()
+            this.getChartData()
         },
         watch: {
             // 라우트가 변경되면 메소드를 다시 호출됩니다.
-            '$route': 'chartData'
+            '$route': 'getChartData'
         },
         methods: {
-            chartData() {
-                console.log('chartData==!!');
-              console.log(chartService.getChartInfo());
+            getChartData() {
+                let dataObj =chartService.getChartInfo();
+                console.log(Promise.resolve(dataObj).valueOf());
+              // for(data of dataObj) {
+                //     console.log('date' + data.date);
+                //     console.log('companyName' + data.companyName);
+                // }
             }
         }
     };
