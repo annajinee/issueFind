@@ -9,55 +9,19 @@
 <script>
     import VueApexCharts from 'vue-apexcharts'
     import {chartService} from '../_services/chart.service';
-    let date=[];
-    let closingPrice = [];
-    let volume =[];
-    let views =[];
-    let sympathy =[];
-    let unsympathy=[];
-    let score=[];
-    let test='asdasd';
+
     export default {
         data() {
             return {
-                series: [{
-                    name: test,
-                    type: 'line',
-                    data: closingPrice
-                },
-                    {
-                        name: '거래금액',
-                        type: 'line',
-                        data: volume
-                    },
-                    {
-                        name: '공감',
-                        type: 'line',
-                        data: sympathy
-                    },
-                    {
-                        name: '비공감',
-                        type: 'line',
-                        data: unsympathy
-                    },
-                    {
-                        name: '게시글 스코어',
-                        type: 'line',
-                        data: score
-                    },
-                    {
-                        name: '게시글 뷰',
-                        type: 'line',
-                        data: views
-                    }],
+                series: [],
                 chartOptions: {
                     colors: ['#B40404', '#DF7401', '#0174DF', '#585858', '#0B6121', '#380B61'],
                     chart: {
-                        height: ['100%', 100],
+                        height: ['350%', 100],
                         type: 'line',
                     },
                     stroke: {
-                        width: [2, 2, 2, 2, 2, 2, 2]
+                        width: [1, 1, 1, 1, 1, 1, 1]
                     },
                     title: {
                     },
@@ -65,7 +29,7 @@
                         enabled: true,
                         enabledOnSeries: []
                     },
-                    labels: date,
+                    // labels: [],
                     xaxis: {
                         type: 'text'
                     },
@@ -97,25 +61,65 @@
         },
         methods: {
             getChartData() {
+                let date=[];
+                let closingPrice = [];
+                let volume =[];
+                let views =[];
+                let sympathy =[];
+                let unsympathy=[];
+                let score=[];
+
                 let obj;
                 let dataObj =chartService.getChartInfo().then(response => {
                     obj = JSON.parse(response);
                     console.log('data:'+obj['data']);
                     let dataArr = obj['data'];
                     for(var i=0; i<dataArr.length; i++) {
-                        closingPrice[i]=dataArr[i]['closingPrice'];
-                        date[i] = dataArr[i]['date'];
-                        sympathy[i]=dataArr[i]['sympathy'];
-                        unsympathy[i]=dataArr[i]['unsympathy'];
-                        score[i]=dataArr[i]['score'];
-                        volume[i]=dataArr[i]['volume'];
+                        closingPrice.push(dataArr[i]['closingPrice']);
+                        date.push(dataArr[i]['date']);
+                        sympathy.push(dataArr[i]['sympathy']);
+                        unsympathy.push(dataArr[i]['unsympathy']);
+                        score.push(dataArr[i]['score']);
+                        volume.push(dataArr[i]['volume']);
                     }
-                    console.log('closingPrice-----:::::::::'+date);
-                });
-                console.log('closingPrice'+test);
-                this.test='테스트트트';
-                console.log('closingPrice'+this.test);
-                Vue.$set();
+                    var target_closingPrice = {
+                        name: '종가',
+                        type: 'line',
+                        data: closingPrice
+                    };
+                    var target_volume = {
+                        name: '거래금액',
+                        type: 'line',
+                        data: volume
+                    };
+                    var target_sympath= {
+                        name: '공감',
+                        type: 'line',
+                        data: sympathy
+                    };
+                    var target_unsympathy= {
+                        name: '비공감',
+                        type: 'line',
+                        data: unsympathy
+                    };
+                    var target_socre= {
+                        name: '게시글 스코어',
+                        type: 'line',
+                        data: score
+                    };
+                    var target_views= {
+                        name: '게시글 뷰',
+                        type: 'line',
+                        data: views
+                    };
+                    this.series.push(target_closingPrice);
+                    this.series.push(target_volume);
+                    this.series.push(target_sympath);
+                    this.series.push(target_unsympathy);
+                    this.series.push(target_socre);
+                    this.series.push(target_views);
+                    this.$set(this.chartOptions, 'labels', date);
+                    });
             }
         }
     };
