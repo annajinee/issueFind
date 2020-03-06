@@ -9,39 +9,46 @@
 <script>
     import VueApexCharts from 'vue-apexcharts'
     import {chartService} from '../_services/chart.service';
-
+    let date=[];
+    let closingPrice = [];
+    let volume =[];
+    let views =[];
+    let sympathy =[];
+    let unsympathy=[];
+    let score=[];
+    let test='asdasd';
     export default {
         data() {
             return {
                 series: [{
-                    name: this.closingPrice,
+                    name: test,
                     type: 'line',
-                    data: [0, 0]
+                    data: closingPrice
                 },
                     {
                         name: '거래금액',
                         type: 'line',
-                        data: [0, 0]
+                        data: volume
                     },
                     {
                         name: '공감',
                         type: 'line',
-                        data: [15, 0]
+                        data: sympathy
                     },
                     {
                         name: '비공감',
                         type: 'line',
-                        data: [1, 0]
+                        data: unsympathy
                     },
                     {
                         name: '게시글 스코어',
                         type: 'line',
-                        data: [2245, 0]
+                        data: score
                     },
                     {
                         name: '게시글 뷰',
                         type: 'line',
-                        data: [2085, 0]
+                        data: views
                     }],
                 chartOptions: {
                     colors: ['#B40404', '#DF7401', '#0174DF', '#585858', '#0B6121', '#380B61'],
@@ -58,7 +65,7 @@
                         enabled: true,
                         enabledOnSeries: []
                     },
-                    labels: this.getDate(),
+                    labels: date,
                     xaxis: {
                         type: 'text'
                     },
@@ -83,7 +90,6 @@
         created() {
             // 뷰가 생성되고 데이터가 이미 감시 되고 있을 때 데이터를 가져온다.
             this.getChartData();
-            this.getDate();
         },
         watch: {
             // 라우트가 변경되면 메소드를 다시 호출됩니다.
@@ -92,34 +98,25 @@
         methods: {
             getChartData() {
                 let obj;
-                this.closingPrice = [];
-                this.volume =[];
-                this.views =[];
-                this.sympathy =[];
-                this.unsympathy=[];
-                this.score=[];
-                this.date=[];
                 let dataObj =chartService.getChartInfo().then(response => {
                     obj = JSON.parse(response);
                     console.log('data:'+obj['data']);
                     let dataArr = obj['data'];
                     for(var i=0; i<dataArr.length; i++) {
-                        console.log(dataArr[i]['companyCode']);
-                        this.closingPrice.push(dataArr[i]['closingPrice']);
-                        this.date.push(dataArr[i]['date']);
+                        closingPrice[i]=dataArr[i]['closingPrice'];
+                        date[i] = dataArr[i]['date'];
+                        sympathy[i]=dataArr[i]['sympathy'];
+                        unsympathy[i]=dataArr[i]['unsympathy'];
+                        score[i]=dataArr[i]['score'];
+                        volume[i]=dataArr[i]['volume'];
                     }
-                    console.log('closingPrice'+this.date);
-                    return this.date;
+                    console.log('closingPrice-----:::::::::'+date);
                 });
-            console.log('closingPrice'+this.closingPrice);
-            },
-            getDate(){
-                this.getChartData();
-                console.log('this.getdate'+ this.getChartData());
-                return this.date;
+                console.log('closingPrice'+test);
+                this.test='테스트트트';
+                console.log('closingPrice'+this.test);
+                Vue.$set();
             }
-
-
         }
     };
 </script>
