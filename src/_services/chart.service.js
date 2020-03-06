@@ -12,7 +12,9 @@ function getChartInfo() {
         headers: { 'Content-Type': 'application/json'}
     };
 
-    return fetch(`${config.apiUrl}/api/stock/083660`, requestOptions).then(handleResponse);
+    return fetch(`${config.apiUrl}/api/stock/083660`, requestOptions).then(handleResponse).then(response => {
+        return response;
+    });
 }
 
 function handleResponse(response) {
