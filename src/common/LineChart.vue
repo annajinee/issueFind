@@ -74,7 +74,7 @@
                     obj = JSON.parse(response);
                     console.log('data:'+obj['data']);
                     let dataArr = obj['data'];
-                    for(var i=0; i<dataArr.length; i++) {
+                    for(let i=0; i<dataArr.length; i++) {
                         closingPrice.push(dataArr[i]['closingPrice']);
                         date.push(dataArr[i]['date']);
                         sympathy.push(dataArr[i]['sympathy']);

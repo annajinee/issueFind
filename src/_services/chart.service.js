@@ -6,13 +6,15 @@ export const chartService = {
     // serchCompanyInfo
 };
 
-function getChartInfo() {
+function getChartInfo(eventname) {
     const requestOptions = {
         method: 'GET',
         headers: { 'Content-Type': 'application/json'}
     };
+    //예 : 083660
+    console.log('eventname:'+eventname);
 
-    return fetch(`${config.apiUrl}/api/stock/083660`, requestOptions).then(handleResponse).then(response => {
+    return fetch(`${config.apiUrl}/api/stock/`+eventname, requestOptions).then(handleResponse).then(response => {
         return response;
     });
 }

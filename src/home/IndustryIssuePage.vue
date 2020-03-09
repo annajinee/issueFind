@@ -19,8 +19,11 @@
                     <div class="col-lg-5">
                         종목검색
                         <i class="fas fa-search mb-2 ml-1"></i>
-                        <input type="text" placeholder="종목명 or 종목코드를 입력하세요" class="form-control-sm col-md-6 mb-2"/>
-                        <button class="btn-sm btn-dark js-scroll-trigger col-md-3 btn-sm mb-2 ml-2">검색하기</button>
+                        <input type="text" placeholder="종목명 or 종목코드를 입력하세요" v-model="eventname" name="eventname"
+                               class="form-control-sm col-md-6 mb-2"/>
+                        <button class="btn-sm btn-dark js-scroll-trigger col-md-3 btn-sm mb-2 ml-2"
+                                @click="getChartInfo()">검색하기
+                        </button>
                     </div>
                 </div>
                 <hr class="dropdown-divider">
@@ -41,7 +44,10 @@
                     </div>
                 </div>
                 <div class="col-lg-12 text-center mt-3">
-                    <LineChart/>
+                    <!--                    <LineChart/>-->
+                    <div id="chart">
+                        <apexchart type="line" height="350" :options="chartOptions" :series="series"></apexchart>
+                    </div>
                 </div>
                 <div class="row mt-4">
                     <div class="col-lg-4">
@@ -172,7 +178,8 @@
                                 <td>제조</td>
                                 <td>89</td>
                                 <td>+5.8%</td>
-                            </tr><tr>
+                            </tr>
+                            <tr>
                                 <th scope="row">4</th>
                                 <td>삼성전자</td>
                                 <td>제조</td>
@@ -189,7 +196,8 @@
                                 <th colspan="4">시뮬레이션 수익률</th>
                             </tr>
                             <tr class=bg-light>
-                                <th colspan="4" class="font-weight-normal">기준일 - 2019.02.03 &nbsp;수익률 <p class="text-danger d-inline-block m-0 font-weight-bolder">135.4%(보유중)</p></th>
+                                <th colspan="4" class="font-weight-normal">기준일 - 2019.02.03 &nbsp;수익률 <p
+                                        class="text-danger d-inline-block m-0 font-weight-bolder">135.4%(보유중)</p></th>
                             </tr>
                             </thead>
                             <tbody class="border">
@@ -255,14 +263,138 @@
     import ChartHeader from "../common/ChartHeader";
     import YAxisChart from "../common/YAxisChart";
     import LineChart from "../common/LineChart";
+    import {chartService} from '../_services/chart.service';
+    import VueApexCharts from "vue-apexcharts";
 
     export default {
         name: 'IndustryIssue',
+        data() {
+            return {
+                eventname: '',
+                series: [],
+                chartOptions: {
+                    colors: ['#B40404', '#DF7401', '#0174DF', '#585858', '#0B6121', '#380B61'],
+                    chart: {
+                        height: ['350%', 100],
+                        type: 'line',
+                    },
+                    stroke: {
+                        width: [1, 1, 1, 1, 1, 1, 1]
+                    },
+                    title: {},
+                    dataLabels: {
+                        enabled: true,
+                        enabledOnSeries: []
+                    },
+                    // labels: [],
+                    xaxis: {
+                        type: 'text'
+                    },
+                    yaxis: [{
+                        title: {
+                            text: '종가',
+                        },
+                        showAlways: true,
+                        logarithmic: false
+                    },
+                        {
+                            opposite: true,
+                            title: {}
+                        }
+                    ]
+                },
+            }
+        },
+        methods: {
+            // getChartInfo() {
+            //     const {eventname} = this;
+            //     if (eventname) {
+            //         console.log('chartinfo in page : ' + eventname);
+            //         chartService.getChartInfo(eventname);
+            //     }
+            // },
+            getChartInfo() {
+                const {eventname} = this;
+                let dataObj = chartService.getChartInfo(eventname).then(response => {
+                    
+                    let date = [];
+                    let closingPrice = [];
+                    let volume = [];
+                    let views = [];
+                    let sympathy = [];
+                    let unsympathy = [];
+                    let score = [];
+                    let obj;
+
+                    obj = JSON.parse(response);
+                    console.log('data:' + obj['data']);
+                    let dataArr = obj['data'];
+                    let target_closingPrice = {
+                        name: '종가',
+                        type: 'line',
+                        data: closingPrice
+                    };
+                    let target_volume = {
+                        name: '거래금액',
+                        type: 'line',
+                        data: volume
+                    };
+                    let target_sympath = {
+                        name: '공감',
+                        type: 'line',
+                        data: sympathy
+                    };
+                    let target_unsympathy = {
+                        name: '비공감',
+                        type: 'line',
+                        data: unsympathy
+                    };
+                    let target_socre = {
+                        name: '게시글 스코어',
+                        type: 'line',
+                        data: score
+                    };
+                    let target_views = {
+                        name: '게시글 뷰',
+                        type: 'line',
+                        data: views
+                    };
+
+                    if (dataArr.length > 0) {
+                        console.log('======price!!!!!!!!'+closingPrice);
+                        for (let i = 0; i < dataArr.length; i++) {
+                            closingPrice.push(dataArr[i]['closingPrice']);
+                            date.push(dataArr[i]['date']);
+                            sympathy.push(dataArr[i]['sympathy']);
+                            unsympathy.push(dataArr[i]['unsympathy']);
+                            score.push(dataArr[i]['score']);
+                            volume.push(dataArr[i]['volume']);
+                        }
+                        target_closingPrice.data = closingPrice;
+                        target_volume.data = volume;
+                        target_sympath.data = sympathy;
+                        target_unsympathy.data = unsympathy;
+                        target_socre.data = score;
+                        target_views.data = views;
+                        this.series.push(target_closingPrice);
+                        this.series.push(target_volume);
+                        this.series.push(target_sympath);
+                        this.series.push(target_unsympathy);
+                        this.series.push(target_socre);
+                        this.series.push(target_views);
+                        this.$set(this.chartOptions, 'labels', date);
+                    } else {
+                        alert('검색된 데이터가 없습니다.');
+                    }
+                });
+            }
+        },
         components: {
             MixedChart,
             YAxisChart,
             LineChart,
-            ChartHeader
+            ChartHeader,
+            apexchart: VueApexCharts
         }
     };
 </script>
