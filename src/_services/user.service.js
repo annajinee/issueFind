@@ -1,17 +1,18 @@
 import config from 'config';
-import { authHeader } from '../_helpers';
+import {authHeader} from '../_helpers';
 
 export const userService = {
     login,
     logout,
-    getAll
+    getAll,
+    signup
 };
 
 function login(username, password) {
     const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({username, password})
     };
 
     return fetch(`${config.apiUrl}/api/users/signin?password=` + password + `&username=` + username, requestOptions)
@@ -20,12 +21,33 @@ function login(username, password) {
             localStorage.setItem('user', user);
             localStorage.setItem('username', username);
             return localStorage.getItem('user');
-    });
+        });
 }
 
 function logout() {
     localStorage.removeItem('user');
     localStorage.removeItem('username');
+}
+
+function signup(username, password, email) {
+    const requestOptions = {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            'username': username,
+            'password': password,
+            'email': email,
+            "roles": [
+                "ROLE_ADMIN"
+            ]
+        })
+    };
+    console.log('req body:' + requestOptions.body.toString());
+    return fetch(`${config.apiUrl}/api/users/signup`, requestOptions).then(response => {
+        console.log('response:' + response);
+        console.log('status:' + response.status);
+        return response.status;
+    });
 }
 
 function getAll() {
@@ -48,7 +70,8 @@ function handleResponse(response) {
             const error = (data && data.message) || response.statusText;
             return Promise.reject(error);
         }
-        console.log('response.next'+data);
+        console.log('response.next' + data);
         return data;
     });
 }
+
