@@ -7,20 +7,18 @@
                         <p class="font-weight-bolder">실시간 이슈</p>
                         <hr class="dropdown-divider">
                     </div>
-                    <div class="col-lg-5">
-                        <button class="btn btn-danger js-scroll-trigger col-md-3 btn-sm mb-2 mr-1">이슈/테마 검색</button>
-                        <button class="btn btn-danger js-scroll-trigger col-md-3 btn-sm mb-2">종목 검색</button>
-                    </div>
                     <div class="col-lg-4">
-                        <button class="btn btn-outline-danger js-scroll-trigger col-md-2 mr-1 btn-sm mb-2">일</button>
-                        <button class="btn btn-outline-danger js-scroll-trigger col-md-2 mr-1 btn-sm mb-2">주</button>
-                        <button class="btn btn-outline-danger js-scroll-trigger col-md-2 mr-1 btn-sm mb-2">1개월</button>
-                        <button class="btn btn-outline-danger js-scroll-trigger col-md-2 btn-sm mb-2">최대</button>
+                        <button class="btn btn-danger js-scroll-trigger col-md-5 btn-sm mb-2 mr-1">이슈/테마 검색</button>
+                        <button class="btn btn-danger js-scroll-trigger col-md-5 btn-sm mb-2">종목 검색</button>
+                    </div>
+                    <div class="col-lg-5">
+                        <button class="btn btn-outline-danger js-scroll-trigger col-sm-2 mr-1 btn-sm mb-2">일</button>
+                        <button class="btn btn-outline-danger js-scroll-trigger col-sm-2 mr-1 btn-sm mb-2">주</button>
+                        <button class="btn btn-outline-danger js-scroll-trigger col-sm-2 mr-1 btn-sm mb-2">1개월</button>
+                        <button class="btn btn-outline-danger js-scroll-trigger col-sm-2 btn-sm mb-2">최대</button>
                     </div>
                 </div>
                 <hr class="dropdown-divider">
-
-
                 <div class="row mt-4">
                     <div class="col-sm-8 col-md-push-3">
                         <div class="row">

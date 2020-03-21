@@ -1,6 +1,7 @@
 `<template>
+    <div>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-sm-2" style="background: #FFFFFF" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger">
                 <router-link to="/"><img src="img/portfolio/quantimg/bi_menu.png" style="width: 25%"/></router-link>
@@ -15,7 +16,7 @@
                     <li class="nav-item">
                         <div class="dropdown show">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                               id="introServiceMenuLink" aria-haspopup="true" aria-expanded="false">서비스 개요</a>
+                               id="introServiceMenuLink" aria-haspopup="true" aria-expanded="false" style="font-size: large">서비스 개요</a>
                             <div class="dropdown-menu" aria-labelledby="introServiceMenuLink">
                                 <a class="dropdown-item">
                                     <router-link to="/intro">회사소개</router-link>
@@ -29,7 +30,7 @@
                     <li class="nav-item">
                         <div class="dropdown show">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                               id="serviceReqMenuLink" aria-haspopup="true" aria-expanded="false">서비스 신청</a>
+                               id="serviceReqMenuLink" aria-haspopup="true" aria-expanded="false" style="font-size: large">서비스 신청</a>
                             <div class="dropdown-menu" aria-labelledby="serviceReqMenuLink">
                                 <a class="dropdown-item">
                                     <router-link to="/service/pay">유료서비스</router-link>
@@ -63,7 +64,7 @@
                     <li class="nav-item">
                         <div class="dropdown show">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                               id="issueMenuLink" aria-haspopup="true" aria-expanded="false">이슈 파인더</a>
+                               id="issueMenuLink" aria-haspopup="true" aria-expanded="false" style="font-size: large">이슈 파인더</a>
                             <div class="dropdown-menu" aria-labelledby="issueMenuLink">
                                 <a class="dropdown-item">
                                     <router-link to="/auth/issue/realtime">실시간이슈</router-link>
@@ -76,8 +77,8 @@
                     <li class="nav-item">
                         <div class="dropdown show">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                               id="myMenuLink" aria-haspopup="true" aria-expanded="false" v-if="logIn">마이 페이지</a>
-                            <a class="nav-link" href="#" id="logInLink" v-if="!logIn">
+                               id="myMenuLink" aria-haspopup="true" aria-expanded="false" style="font-size: large" v-if="logIn">마이 페이지</a>
+                            <a class="nav-link" href="#" id="logInLink" style="font-size: large" v-if="!logIn">
                                 <router-link to="/login" >로그인</router-link>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="myMenuLink" v-if="logIn">
@@ -94,6 +95,7 @@
             </div>
         </div>
     </nav>
+    </div>
 </template>
 <script>
     export default {
@@ -118,5 +120,8 @@
 
     .navbar-brand {
         color: #212529 !important;
+    }
+    .navbar-light .navbar-toggler {
+        font-size: small;
     }
 </style>

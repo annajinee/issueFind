@@ -20,8 +20,8 @@
                         종목검색
                         <i class="fas fa-search mb-2 ml-1"></i>
                         <input type="text" placeholder="종목명 or 종목코드를 입력하세요" v-model="eventname" name="eventname"
-                               class="form-control-sm col-md-6 mb-2"/>
-                        <button class="btn-sm btn-dark js-scroll-trigger col-md-3 btn-sm mb-2 ml-2"
+                               class="form-control-sm col-md-6 mb-2 mr-2"/>
+                        <button class="btn-sm btn-dark js-scroll-trigger col-md-3 btn-sm mb-2"
                                 @click="getChartInfo()">검색하기
                         </button>
                     </div>
@@ -32,13 +32,13 @@
                         <ChartHeader/>
                     </div>
                     <div class="col-lg-5">
-                        <div class="row mt-3 ml-4">
-                            <button class="btn-sm btn-dark js-scroll-trigger col-sm-3 mr-2 ml-2">기업뉴스</button>
-                            <button class="btn-sm btn-dark js-scroll-trigger col-sm-3 mr-2">기업공시</button>
-                            <button class="btn-sm btn-dark js-scroll-trigger col-sm-3">이슈분석</button>
+                        <div class="row mt-2 ml-1">
+                            <button class="btn-sm btn-dark js-scroll-trigger col-sm-3 mr-2 mt-1">기업뉴스</button>
+                            <button class="btn-sm btn-dark js-scroll-trigger col-sm-3 mr-2 mt-1">기업공시</button>
+                            <button class="btn-sm btn-dark js-scroll-trigger col-sm-3 mr-2 mt-1">이슈분석</button>
                         </div>
-                        <div class="row ml-4">
-                            <button class="btn btn-outline-info js-scroll-trigger col-sm-10 mt-3">관심업종 등록하기
+                        <div class="row ml-1">
+                            <button class="btn btn-outline-info js-scroll-trigger col-sm-10 mt-3 mr-2">관심업종 등록하기
                             </button>
                         </div>
                     </div>
