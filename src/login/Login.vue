@@ -22,7 +22,7 @@
                     <div class="mt-3">
                         <router-link to="/signup" class="text-danger">아이디 찾기</router-link>
                         <router-link to="/signup" class="pl-4 text-danger">비밀번호 찾기</router-link>
-                        <router-link to="/signup" class="pl-4 text-danger">회원가입</router-link>
+                        <router-link to="/signup/agree" class="pl-4 text-danger">회원가입</router-link>
                     </div>
                     <div class="form-group mt-4">
                         <button class="btn btn-danger btn-lg js-scroll-trigger col-lg-12" :disabled="loggingIn">로그인

@@ -8,14 +8,61 @@
                         <hr class="dropdown-divider">
                     </div>
                     <div class="col-lg-4">
-                        <button class="btn btn-danger js-scroll-trigger col-md-5 btn-sm mb-2 mr-1">이슈/테마 검색</button>
-                        <button class="btn btn-danger js-scroll-trigger col-md-5 btn-sm mb-2">종목 검색</button>
+                        <mq-layout mq="laptop">
+                            <button class="btn btn-dark js-scroll-trigger col-md-5 btn-sm mb-2 mr-1">이슈/테마 검색</button>
+                            <button class="btn btn-dark js-scroll-trigger col-md-5 btn-sm mb-2">종목 검색</button>
+                        </mq-layout>
+                        <mq-layout mq="tablet">
+                            <table class="text-center w-100">
+                                <tr>
+                                    <td class="w-50">
+                                        <button class="btn btn-dark js-scroll-trigger col-md-5 btn-sm mb-2 mr-1">이슈/테마
+                                            검색
+                                        </button>
+                                    </td>
+                                    <td class="w-50">
+                                        <button class="btn btn-dark js-scroll-trigger col-md-5 btn-sm mb-2">종목 검색
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </mq-layout>
                     </div>
                     <div class="col-lg-5">
-                        <button class="btn btn-outline-danger js-scroll-trigger col-sm-2 mr-1 btn-sm mb-2">일</button>
-                        <button class="btn btn-outline-danger js-scroll-trigger col-sm-2 mr-1 btn-sm mb-2">주</button>
-                        <button class="btn btn-outline-danger js-scroll-trigger col-sm-2 mr-1 btn-sm mb-2">1개월</button>
-                        <button class="btn btn-outline-danger js-scroll-trigger col-sm-2 btn-sm mb-2">최대</button>
+                        <mq-layout mq="laptop">
+                            <button class="btn btn-danger js-scroll-trigger col-sm-2 mr-1 btn-sm mb-2">일
+                            </button>
+                            <button class="btn btn-danger js-scroll-trigger col-sm-2 mr-1 btn-sm mb-2">주
+                            </button>
+                            <button class="btn btn-danger js-scroll-trigger col-sm-2 mr-1 btn-sm mb-2">1개월
+                            </button>
+                            <button class="btn btn-danger js-scroll-trigger col-sm-2 btn-sm mb-2">최대</button>
+                        </mq-layout>
+                        <mq-layout mq="tablet">
+                            <table class="text-center w-100">
+                                <tr>
+                                    <td class="w-25">
+                                        <button class="btn btn-danger js-scroll-trigger col-sm-5 mr-1 btn-sm mb-2">
+                                            일
+                                        </button>
+                                    </td>
+                                    <td class="w-25">
+                                        <button class="btn btn-danger js-scroll-trigger col-sm-5 mr-1 btn-sm mb-2">
+                                            주
+                                        </button>
+                                    </td>
+                                    <td class="w-25">
+                                        <button class="btn btn-danger js-scroll-trigger col-sm-5 mr-1 btn-sm mb-2">
+                                            1개월
+                                        </button>
+                                    </td>
+                                    <td class="w-25">
+                                        <button class="btn btn-danger js-scroll-trigger col-sm-5 btn-sm mb-2">최대
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </mq-layout>
                     </div>
                 </div>
                 <hr class="dropdown-divider">
@@ -24,20 +71,20 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="row">
-                                <div class="col-sm-3">
-                                <h6 class="font-weight-bolder d-inline-block">코스피</h6>
-                                </div>
-                                <div class="text-right col-sm-9">
-                                <h6 class="color-blue d-inline-block">1,535.35</h6>&nbsp;
-                                <h6 class="color-blue d-inline-block">▼25.5</h6>&nbsp;
-                                <h6 class="color-blue d-inline-block">-0.56%</h6>
-                                </div>
+                                    <div class="col-sm-3">
+                                        <h6 class="font-weight-bolder d-inline-block">코스피</h6>
+                                    </div>
+                                    <div class="text-right col-sm-9">
+                                        <h6 class="color-blue d-inline-block">1,535.35</h6>&nbsp;
+                                        <h6 class="color-blue d-inline-block">▼25.5</h6>&nbsp;
+                                        <h6 class="color-blue d-inline-block">-0.56%</h6>
+                                    </div>
                                 </div>
                                 <div class="border">
                                     <candle-stick-chart/>
                                 </div>
                                 <div class="text-sm-center small mt-3 font-weight-bolder">
-                                    <p class="d-inline-block">뉴스  +508</p>&nbsp; |
+                                    <p class="d-inline-block">뉴스 +508</p>&nbsp; |
                                     <p class="d-inline-block">커뮤니티 +1,330</p>&nbsp; |
                                     <p class="d-inline-block">공시 -20</p>
                                 </div>
@@ -57,7 +104,7 @@
                                     <candle-stick-chart/>
                                 </div>
                                 <div class="text-sm-center small mt-3 font-weight-bolder">
-                                    <p class="d-inline-block">뉴스  +508</p>&nbsp; |
+                                    <p class="d-inline-block">뉴스 +508</p>&nbsp; |
                                     <p class="d-inline-block">커뮤니티 +1,330</p>&nbsp; |
                                     <p class="d-inline-block">공시 -20</p>
                                 </div>
@@ -79,7 +126,7 @@
                                     <candle-stick-chart/>
                                 </div>
                                 <div class="text-sm-center small mt-3 font-weight-bolder">
-                                    <p class="d-inline-block">뉴스  +508</p>&nbsp; |
+                                    <p class="d-inline-block">뉴스 +508</p>&nbsp; |
                                     <p class="d-inline-block">커뮤니티 +1,330</p>&nbsp; |
                                     <p class="d-inline-block">공시 -20</p>
                                 </div>
@@ -99,7 +146,7 @@
                                     <candle-stick-chart/>
                                 </div>
                                 <div class="text-sm-center small mt-3 font-weight-bolder">
-                                    <p class="d-inline-block">뉴스  +508</p>&nbsp; |
+                                    <p class="d-inline-block">뉴스 +508</p>&nbsp; |
                                     <p class="d-inline-block">커뮤니티 +1,330</p>&nbsp; |
                                     <p class="d-inline-block">공시 -20</p>
                                 </div>
@@ -111,7 +158,9 @@
                                     <thead class="border">
                                     <tr>
                                         <th colspan="4">코스피 종합이슈 상위 TOP 10</th>
-                                        <th class="text-right font-weight-normal"><router-link to="/signup">더보기 ></router-link></th>
+                                        <th class="text-right font-weight-normal">
+                                            <router-link to="/signup">더보기 ></router-link>
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody class="border">
@@ -186,7 +235,9 @@
                                     <thead class="border">
                                     <tr>
                                         <th colspan="4">코스닥 종합이슈 상위 TOP 10</th>
-                                        <th class="text-right font-weight-normal"><router-link to="/signup">더보기 ></router-link></th>
+                                        <th class="text-right font-weight-normal">
+                                            <router-link to="/signup">더보기 ></router-link>
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody class="border">
@@ -260,11 +311,30 @@
                     </div>
                     <div class="col-sm-4 col-md-pull-9">
                         <p class="font-weight-bolder d-inline-block m-0">전일 주요 업종/소스별 이슈</p>
-                        <p class="text-right font-weight-normal small"><router-link to="/signup">더보기 ></router-link></p>
+                        <p class="text-right font-weight-normal small">
+                            <router-link to="/signup">더보기 ></router-link>
+                        </p>
                         <div class="text-sm-center">
-                        <button class="btn btn-dark js-scroll-trigger col-md-3 mr-2 btn-sm mb-2">웹 이슈</button>
-                        <button class="btn btn-dark js-scroll-trigger col-md-3 mr-2 btn-sm mb-2">뉴스 이슈</button>
-                        <button class="btn btn-dark js-scroll-trigger col-md-3 btn-sm mb-2">공시 이슈</button>
+                            <mq-layout mq="laptop">
+                            <button class="btn btn-dark js-scroll-trigger col-md-3 mr-2 btn-sm mb-2">웹 이슈</button>
+                            <button class="btn btn-dark js-scroll-trigger col-md-3 mr-2 btn-sm mb-2">뉴스 이슈</button>
+                            <button class="btn btn-dark js-scroll-trigger col-md-3 btn-sm mb-2">공시 이슈</button>
+                            </mq-layout>
+                            <mq-layout mq="tablet">
+                                <table class="text-center w-100">
+                                    <tr>
+                                        <td class="w-25">
+                                            <button class="btn btn-dark js-scroll-trigger col-md-3 mr-2 btn-sm mb-2">웹 이슈</button>
+                                        </td>
+                                        <td class="w-25">
+                                            <button class="btn btn-dark js-scroll-trigger col-md-3 mr-2 btn-sm mb-2">뉴스 이슈</button>
+                                        </td>
+                                        <td class="w-25">
+                                            <button class="btn btn-dark js-scroll-trigger col-md-3 btn-sm mb-2">공시 이슈</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </mq-layout>
                         </div>
                         <hr class="dropdown-divider">
                         <table class="table table-borderless small text-left table-hover">
@@ -396,11 +466,12 @@
     import YAxisChart from "../common/YAxisChart";
     import LineChart from "../common/LineChart";
     import CandleStickChart from "../common/CandleStickChart";
-
+    import VueMq from 'vue-mq'
+    import Vue from "vue";
 
     export default {
-        name: 'RealTimeIssuePage',
         components: {
+            vueMq: VueMq,
             MixedChart,
             YAxisChart,
             LineChart,
@@ -408,6 +479,15 @@
             CandleStickChart
         }
     };
+    Vue.use(
+        VueMq, {
+            breakpoints: {
+                tablet: 300,
+                laptop: 1250
+            }
+        }
+    );
+
 </script>
 
 <style scoped>

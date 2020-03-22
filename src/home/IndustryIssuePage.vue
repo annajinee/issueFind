@@ -8,22 +8,72 @@
                         <hr class="dropdown-divider">
                     </div>
                     <div class="col-lg-3">
-                        <button class="btn btn-danger js-scroll-trigger col-md-8 btn-sm mb-2">이슈/테마 검색</button>
+                        <button class="btn btn-dark js-scroll-trigger col-md-8 btn-sm mb-2">이슈/테마 검색</button>
                     </div>
                     <div class="col-lg-4">
-                        <button class="btn btn-outline-danger js-scroll-trigger col-md-2 mr-1 btn-sm mb-2">일</button>
-                        <button class="btn btn-outline-danger js-scroll-trigger col-md-2 mr-1 btn-sm mb-2">주</button>
-                        <button class="btn btn-outline-danger js-scroll-trigger col-md-2 mr-1 btn-sm mb-2">1개월</button>
-                        <button class="btn btn-outline-danger js-scroll-trigger col-md-2 btn-sm mb-2">최대</button>
+                        <mq-layout mq="laptop">
+                            <button class="btn btn-danger js-scroll-trigger col-sm-2 mr-1 btn-sm mb-2">일
+                            </button>
+                            <button class="btn btn-danger js-scroll-trigger col-sm-2 mr-1 btn-sm mb-2">주
+                            </button>
+                            <button class="btn btn-danger js-scroll-trigger col-sm-2 mr-1 btn-sm mb-2">1개월
+                            </button>
+                            <button class="btn btn-danger js-scroll-trigger col-sm-2 btn-sm mb-2">최대</button>
+                        </mq-layout>
+                        <mq-layout mq="tablet">
+                            <table class="text-center w-100">
+                                <tr>
+                                    <td class="w-25">
+                                        <button class="btn btn-danger js-scroll-trigger col-sm-5 mr-1 btn-sm mb-2">
+                                            일
+                                        </button>
+                                    </td>
+                                    <td class="w-25">
+                                        <button class="btn btn-danger js-scroll-trigger col-sm-5 mr-1 btn-sm mb-2">
+                                            주
+                                        </button>
+                                    </td>
+                                    <td class="w-25">
+                                        <button class="btn btn-danger js-scroll-trigger col-sm-5 mr-1 btn-sm mb-2">
+                                            1개월
+                                        </button>
+                                    </td>
+                                    <td class="w-25">
+                                        <button class="btn btn-danger js-scroll-trigger col-sm-5 btn-sm mb-2">최대
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </mq-layout>
                     </div>
                     <div class="col-lg-5">
-                        종목검색
-                        <i class="fas fa-search mb-2 ml-1"></i>
-                        <input type="text" placeholder="종목명 or 종목코드를 입력하세요" v-model="eventname" name="eventname"
-                               class="form-control-sm col-md-6 mb-2 mr-2"/>
-                        <button class="btn-sm btn-dark js-scroll-trigger col-md-3 btn-sm mb-2"
-                                @click="getChartInfo()">검색하기
-                        </button>
+                        <mq-layout mq="laptop">
+                            <p class="small">종목검색</p>
+                            <i class="fas fa-search mb-2 ml-1"></i>
+                            <input type="text" placeholder="종목명 or 종목코드를 입력하세요" v-model="eventname" name="eventname"
+                                   class="form-control-sm col-md-6 mb-2 mr-2"/>
+                            <button class="btn-sm btn-dark js-scroll-trigger col-md-3 btn-sm mb-2"
+                                    @click="getChartInfo()">검색하기
+                            </button>
+                        </mq-layout>
+                        <mq-layout mq="tablet">
+                            <table class="w-100">
+                                <td style="width: 20%">
+                                종목검색
+                                <i class="fas fa-search mb-2 ml-1"></i>
+                                </td>
+                                <td style="width: 40%;">
+                                    <input type="text" placeholder="종목명 or 종목코드를 입력하세요" v-model="eventname"
+                                           name="eventname"
+                                           class="form-control-sm col-md-6 mb-2 mr-2"/>
+                                </td>
+                                <td style="width: 20%;">
+                                    <button class="btn-sm btn-dark js-scroll-trigger col-md-3 btn-sm mb-2"
+                                            @click="getChartInfo()">검색하기
+                                    </button>
+                                </td>
+                            </table>
+                        </mq-layout>
                     </div>
                 </div>
                 <hr class="dropdown-divider">
@@ -31,6 +81,7 @@
                     <div class="col-lg-7">
                         <ChartHeader/>
                     </div>
+                    <mq-layout mq="laptop">
                     <div class="col-lg-5">
                         <div class="row mt-2 ml-1">
                             <button class="btn-sm btn-dark js-scroll-trigger col-sm-3 mr-2 mt-1">기업뉴스</button>
@@ -42,6 +93,7 @@
                             </button>
                         </div>
                     </div>
+                    </mq-layout>
                 </div>
                 <div class="col-lg-12 text-center mt-3">
                     <!--                    <LineChart/>-->
@@ -265,6 +317,8 @@
     import LineChart from "../common/LineChart";
     import {chartService} from '../_services/chart.service';
     import VueApexCharts from "vue-apexcharts";
+    import VueMq from 'vue-mq'
+    import Vue from "vue";
 
     export default {
         name: 'IndustryIssue',
@@ -316,7 +370,7 @@
             getChartInfo() {
                 const {eventname} = this;
                 let dataObj = chartService.getChartInfo(eventname).then(response => {
-                    
+
                     let date = [];
                     let closingPrice = [];
                     let volume = [];
@@ -361,7 +415,7 @@
                     };
 
                     if (dataArr.length > 0) {
-                        console.log('======price!!!!!!!!'+closingPrice);
+                        console.log('======price!!!!!!!!' + closingPrice);
                         for (let i = 0; i < dataArr.length; i++) {
                             closingPrice.push(dataArr[i]['closingPrice']);
                             date.push(dataArr[i]['date']);
@@ -394,9 +448,20 @@
             YAxisChart,
             LineChart,
             ChartHeader,
-            apexchart: VueApexCharts
+            apexchart: VueApexCharts,
+            vueMq: VueMq
         }
     };
+
+    Vue.use(
+        VueMq, {
+            breakpoints: {
+                tablet: 500,
+                laptop: 1250
+            }
+        }
+    );
+
 </script>
 
 <style scoped>

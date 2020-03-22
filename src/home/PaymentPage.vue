@@ -124,13 +124,13 @@
                 <table class="table table-bordered text-center mt-5 font-weight-bold bg-light">
                     <thead>
                     <tr>
-                        <th scope="col"><h5 class="font-weight-bolder">기간</h5></th>
-                        <th scope="col"><h5 class="font-weight-bolder">1개월</h5></th>
-                        <th scope="col"><h5 class="font-weight-bolder">6개월</h5></th>
-                        <th scope="col"><h5 class="font-weight-bolder">1년</h5></th>
+                        <th scope="col"><h6 class="font-weight-bolder">기간</h6></th>
+                        <th scope="col"><h6 class="font-weight-bolder">1개월</h6></th>
+                        <th scope="col"><h6 class="font-weight-bolder">6개월</h6></th>
+                        <th scope="col"><h6 class="font-weight-bolder">1년</h6></th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="small">
                     <tr>
                         <th scope="row">
                             정상가
@@ -152,7 +152,7 @@
                     </tr>
                     <tr>
                         <th scope="row">
-                            얼리버드 특가
+                            <p class="small">얼리버드 <br/>특가</p>
                             <hr class="-divide">
                             할인율
                         </th>
@@ -171,7 +171,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row">기간할인 적용가
+                        <th scope="row"><p class="small">기간할인 <br/>적용가</p>
                             <hr class="-divide">
                             할인율
                         </th>
@@ -189,24 +189,24 @@
                         </td>
                     </tr>
                     <tr class="point">
-                        <th scope="row"><p class="small font-weight-bold">얼리버드 X 기간할인<br/>최종 할인가</p>
+                        <th scope="row"><p class="small font-weight-bold">얼리버드X기간할인<br/>최종 할인가</p>
                             <hr class="-divide">
                             최종 <br/>할인율
                         </th>
                         <td>
-                            <h6 class="font-weight-bold"><br/>240,000</h6>
+                            <p class="font-weight-bold"><br/>240,000</p>
                             <hr class="-divide">
-                            <h6 class="color-red m-0 font-weight-bold"><br/>-20%</h6>
+                            <p class="color-red m-0 font-weight-bold"><br/>-20%</p>
                         </td>
                         <td>
-                            <h6 class="font-weight-bold"><br/>936,000</h6>
+                            <p class="font-weight-bold"><br/>936,000</p>
                             <hr class="-divide">
-                            <h6 class="color-red m-0 font-weight-bold"><br/>-48%</h6>
+                            <p class="color-red m-0 font-weight-bold"><br/>-48%</p>
                         </td>
                         <td>
-                            <h6 class="font-weight-bold"><br/>1,440,000</h6>
+                            <p class="font-weight-bold"><br/>1,440,000</p>
                             <hr class="-divide">
-                            <h6 class="color-red m-0 font-weight-bold"><br/>-60%</h6>
+                            <p class="color-red m-0 font-weight-bold"><br/>-60%</p>
                         </td>
                     </tr>
                     </tbody>

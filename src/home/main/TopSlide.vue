@@ -7,7 +7,7 @@
 
             <div class="carousel-item active"> <!--가로-->
                 <mq-layout mq="laptop">
-                    <img src="img/portfolio/slidebanner/Banner1-test@1,5x.png" class="d-block w-100" alt="First slide">
+                    <img src="img/portfolio/slidebanner/Banner1_last_1,5x.png" class="d-block w-100" alt="First slide">
                 </mq-layout>
                 <mq-layout mq="tablet">
                     <img src="img/mobile/slidebanner/m-banner1.png" class="d-block w-100" alt="First slide">
@@ -27,7 +27,7 @@
 
             <div class="carousel-item">
                     <mq-layout mq="laptop">
-                        <img src="img/portfolio/slidebanner/Banner3-test@1,5x.png" class="d-block w-100"
+                        <img src="img/portfolio/slidebanner/Banner3_last_1,5x.png" class="d-block w-100"
                              alt="Second slide">
                     </mq-layout>
                     <mq-layout mq="tablet">
@@ -37,7 +37,7 @@
 
             <div class="carousel-item">
                     <mq-layout mq="laptop">
-                        <img src="img/portfolio/slidebanner/Banner4-test@1,5x.png" class="d-block w-100"
+                        <img src="img/portfolio/slidebanner/Banner4_last_1,5x.png" class="d-block w-100"
                              alt="Third slide">
                     </mq-layout>
                     <mq-layout mq="tablet">

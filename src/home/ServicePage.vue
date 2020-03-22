@@ -7,7 +7,7 @@
                 </mq-layout>
                 <mq-layout mq="tablet">
                     <div class="col-md-8">
-                        <img src="/img/portfolio/service/service_mobile_1,5x.png" class="img-fluid"/>
+                        <img src="/img/portfolio/service/service_mobile.png" class="img-fluid"/>
                     </div>
                 </mq-layout>
                 <div class="text-center mt-5 mr-5 ml-5">

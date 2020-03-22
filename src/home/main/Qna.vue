@@ -36,6 +36,7 @@
                         <a class="btn btn-danger btn-lg js-scroll-trigger mt-2 col-md-5" href="#about">문의하기</a>
                     </div>
                     <div class="col-lg-6">
+                        <mq-layout mq="laptop">
                         <img src="img/portfolio/quantimg/office.jpg" class="img-fluid" style="overflow: hidden; margin-top: 8%; opacity: 0.25">
                         <div class="card-img-overlay" style="margin-top: 10%">
                         <h2 class="mt-5 font-weight-bolder" style="color: #3B240B">하루 한잔의 커피값이면</h2>
@@ -45,6 +46,18 @@
                         <a class="btn btn-dark btn-lg js-scroll-trigger text-center mt-2"
                            href="#about">유료 서비스 기능 소개</a>
                         </div>
+                        </mq-layout>
+                        <mq-layout mq="tablet">
+                            <img src="img/portfolio/quantimg/office.jpg" class="img-fluid" style="overflow: hidden; margin-top: 8%; opacity: 0.25">
+                            <div class="card-img-overlay" style="margin-top: 10%">
+                                <h4 class="mt-2 font-weight-bolder" style="color: #3B240B">하루 한잔의 커피값이면</h4>
+                                <h5 class="mb-2" style="color: #61380B">국내 2,300여개의 기업정보를 한눈에!</h5>
+                                <h4 class="mt-1 color-red font-weight-bold">1DAY – 3,950원</h4>
+                                <p class="mb-">(1년 이용 시 할인가)</p>
+                                <a class="btn btn-dark btn-lg js-scroll-trigger text-center mt-2"
+                                   href="#about">유료 서비스 기능 소개</a>
+                            </div>
+                        </mq-layout>
                     </div>
                 </div>
             </div>
@@ -53,9 +66,22 @@
 </template>
 
 <script>
+    import VueMq from 'vue-mq'
+    import Vue from "vue";
+
     export default {
-        name: "Qna"
-    }
+        components: {
+            vueMq: VueMq
+        }
+    };
+    Vue.use(
+        VueMq, {
+            breakpoints: {
+                tablet: 500,
+                laptop: 1250
+            }
+        }
+    );
 </script>
 
 <style scoped>
