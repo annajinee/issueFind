@@ -47,9 +47,9 @@
                         <h5 class="text-danger font-weight-bold">당신의 성공적인 투자 파트너 <br/> 퀀트리포트와 함께하세요</h5>
                     </div>
                     <div class="text-center mt-5">
-                        <btn class="btn btn-danger btn-lg js-scroll-trigger col-md-4">
+                        <button class="btn btn-danger btn-lg js-scroll-trigger col-md-4">
                             <router-link to="/service" class="btn-danger">서비스 소개 보기</router-link>
-                        </btn>
+                        </button>
                     </div>
                 </mq-layout>
             </div>

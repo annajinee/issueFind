@@ -20,8 +20,8 @@
                     <input type="checkbox" name="chk_info" value="agreePrivate">&nbsp;&nbsp;&nbsp;로그인 상태 유지
                     <hr class="dropdown-divider mt-3">
                     <div class="mt-3">
-                        <router-link to="/signup" class="text-danger">아이디 찾기</router-link>
-                        <router-link to="/signup" class="pl-4 text-danger">비밀번호 찾기</router-link>
+                        <router-link to="/notfound" class="text-danger">아이디 찾기</router-link>
+                        <router-link to="/notfound" class="pl-4 text-danger">비밀번호 찾기</router-link>
                         <router-link to="/signup/agree" class="pl-4 text-danger">회원가입</router-link>
                     </div>
                     <div class="form-group mt-4">

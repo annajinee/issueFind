@@ -213,8 +213,8 @@
                 </table>
             </mq-layout>
             <div class="text-center mt-5">
-                <a class="btn btn-warning btn-lg js-scroll-trigger col-md-4 font-weight-bolder" href="#about">할인가로
-                    결제하기</a>
+                <button class="btn btn-warning btn-lg js-scroll-trigger col-md-4 font-weight-bolder">
+                    <router-link to="/notfound" class="btn-warning">할인가로 결제하기</router-link></button>
             </div>
         </div>
     </section>

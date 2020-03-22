@@ -9,8 +9,11 @@
                     </div>
                     <div class="col-lg-4">
                         <mq-layout mq="laptop">
-                            <button class="btn btn-dark js-scroll-trigger col-md-5 btn-sm mb-2 mr-1">이슈/테마 검색</button>
-                            <button class="btn btn-dark js-scroll-trigger col-md-5 btn-sm mb-2">종목 검색</button>
+                            <button class="btn btn-dark js-scroll-trigger col-md-5 btn-sm mb-2 mr-1">
+                                <router-link to="/notfound" class="btn-dark">이슈/테마 검색</router-link></button>
+                            <button class="btn btn-dark js-scroll-trigger col-md-5 btn-sm mb-2">
+                                <router-link to="/issue/industry" class="btn-dark">종목 검색</router-link>
+                            </button>
                         </mq-layout>
                         <mq-layout mq="tablet">
                             <table class="text-center w-100">

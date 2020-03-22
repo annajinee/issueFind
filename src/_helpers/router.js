@@ -17,6 +17,7 @@ import SignUpAgree from "../login/SignUpAgree";
 import HotIssuePage from "../home/HotIssuePage";
 import IndustryIssuePage from "../home/IndustryIssuePage";
 import MyPage from "../login/MyPage";
+import NotFoundPage from "../home/NotFoundPage";
 
 Vue.use(Router);
 
@@ -40,6 +41,8 @@ export const router = new Router({
     { path: '/auth/issue/realtime/', component: RealTimeIssuePage }, //실시간이슈-유료
     { path: '/issue/hot', component: HotIssuePage }, //핫이슈등록
     { path: '/issue/industry', component: IndustryIssuePage }, //산업별이슈
+    { path: '/notfound', component: NotFoundPage }, //산업별이슈
+
 
     // otherwise redirect to home
     { path: '*', redirect: '/' , component: HomePage}

@@ -8,7 +8,9 @@
                         <hr class="dropdown-divider">
                     </div>
                     <div class="col-lg-3">
-                        <button class="btn btn-dark js-scroll-trigger col-md-8 btn-sm mb-2">이슈/테마 검색</button>
+                        <button class="btn btn-dark js-scroll-trigger col-md-5 btn-sm mb-2 mr-1">
+                            <router-link to="/notfound" class="btn-dark">이슈/테마 검색</router-link>
+                        </button>
                     </div>
                     <div class="col-lg-4">
                         <mq-layout mq="laptop">
@@ -48,7 +50,7 @@
                     </div>
                     <div class="col-lg-5">
                         <mq-layout mq="laptop">
-                            <p class="small">종목검색</p>
+                            종목검색
                             <i class="fas fa-search mb-2 ml-1"></i>
                             <input type="text" placeholder="종목명 or 종목코드를 입력하세요" v-model="eventname" name="eventname"
                                    class="form-control-sm col-md-6 mb-2 mr-2"/>
@@ -59,8 +61,8 @@
                         <mq-layout mq="tablet">
                             <table class="w-100">
                                 <td style="width: 20%">
-                                종목검색
-                                <i class="fas fa-search mb-2 ml-1"></i>
+                                    종목검색
+                                    <i class="fas fa-search mb-2 ml-1"></i>
                                 </td>
                                 <td style="width: 40%;">
                                     <input type="text" placeholder="종목명 or 종목코드를 입력하세요" v-model="eventname"
@@ -81,7 +83,6 @@
                     <div class="col-lg-7">
                         <ChartHeader/>
                     </div>
-                    <mq-layout mq="laptop">
                     <div class="col-lg-5">
                         <div class="row mt-2 ml-1">
                             <button class="btn-sm btn-dark js-scroll-trigger col-sm-3 mr-2 mt-1">기업뉴스</button>
@@ -93,7 +94,6 @@
                             </button>
                         </div>
                     </div>
-                    </mq-layout>
                 </div>
                 <div class="col-lg-12 text-center mt-3">
                     <!--                    <LineChart/>-->
@@ -360,87 +360,88 @@
             }
         },
         methods: {
-            // getChartInfo() {
-            //     const {eventname} = this;
-            //     if (eventname) {
-            //         console.log('chartinfo in page : ' + eventname);
-            //         chartService.getChartInfo(eventname);
-            //     }
-            // },
             getChartInfo() {
                 const {eventname} = this;
-                let dataObj = chartService.getChartInfo(eventname).then(response => {
+                if (eventname === '') {
+                    alert('종목명 or 종목코드를 입력하세요');
+                } else {
+                    let dataObj = chartService.getChartInfo(eventname).then(response => {
 
-                    let date = [];
-                    let closingPrice = [];
-                    let volume = [];
-                    let views = [];
-                    let sympathy = [];
-                    let unsympathy = [];
-                    let score = [];
-                    let obj;
+                        let date = [];
+                        let closingPrice = [];
+                        let volume = [];
+                        let views = [];
+                        let sympathy = [];
+                        let unsympathy = [];
+                        let score = [];
+                        let obj;
 
-                    obj = JSON.parse(response);
-                    console.log('data:' + obj['data']);
-                    let dataArr = obj['data'];
-                    let target_closingPrice = {
-                        name: '종가',
-                        type: 'line',
-                        data: closingPrice
-                    };
-                    let target_volume = {
-                        name: '거래금액',
-                        type: 'line',
-                        data: volume
-                    };
-                    let target_sympath = {
-                        name: '공감',
-                        type: 'line',
-                        data: sympathy
-                    };
-                    let target_unsympathy = {
-                        name: '비공감',
-                        type: 'line',
-                        data: unsympathy
-                    };
-                    let target_socre = {
-                        name: '게시글 스코어',
-                        type: 'line',
-                        data: score
-                    };
-                    let target_views = {
-                        name: '게시글 뷰',
-                        type: 'line',
-                        data: views
-                    };
+                        obj = JSON.parse(response);
+                        console.log('data:' + obj['data']);
+                        let dataArr = obj['data'];
+                        let target_closingPrice = {
+                            name: '종가',
+                            type: 'line',
+                            data: closingPrice
+                        };
+                        let target_volume = {
+                            name: '거래금액',
+                            type: 'line',
+                            data: volume
+                        };
+                        let target_sympath = {
+                            name: '공감',
+                            type: 'line',
+                            data: sympathy
+                        };
+                        let target_unsympathy = {
+                            name: '비공감',
+                            type: 'line',
+                            data: unsympathy
+                        };
+                        let target_socre = {
+                            name: '게시글 스코어',
+                            type: 'line',
+                            data: score
+                        };
+                        let target_views = {
+                            name: '게시글 뷰',
+                            type: 'line',
+                            data: views
+                        };
 
-                    if (dataArr.length > 0) {
-                        console.log('======price!!!!!!!!' + closingPrice);
-                        for (let i = 0; i < dataArr.length; i++) {
-                            closingPrice.push(dataArr[i]['closingPrice']);
-                            date.push(dataArr[i]['date']);
-                            sympathy.push(dataArr[i]['sympathy']);
-                            unsympathy.push(dataArr[i]['unsympathy']);
-                            score.push(dataArr[i]['score']);
-                            volume.push(dataArr[i]['volume']);
+                        if (dataArr.length > 0) {
+                            console.log('======price!!!!!!!!' + closingPrice);
+                            if (this.series.length > 0) {
+                                console.log("뭔가 이싿");
+                                this.series.push('');
+                            }
+                            for (let i = 0; i < dataArr.length; i++) {
+                                closingPrice.push(dataArr[i]['closingPrice']);
+                                date.push(dataArr[i]['date']);
+                                sympathy.push(dataArr[i]['sympathy']);
+                                unsympathy.push(dataArr[i]['unsympathy']);
+                                score.push(dataArr[i]['score']);
+                                volume.push(dataArr[i]['volume']);
+                            }
+                            target_closingPrice.data = closingPrice;
+                            target_volume.data = volume;
+                            target_sympath.data = sympathy;
+                            target_unsympathy.data = unsympathy;
+                            target_socre.data = score;
+                            target_views.data = views;
+                            this.series.push(target_closingPrice);
+                            this.series.push(target_volume);
+                            this.series.push(target_sympath);
+                            this.series.push(target_unsympathy);
+                            this.series.push(target_socre);
+                            this.series.push(target_views);
+                            this.$set(this.chartOptions, 'labels', date);
+                        } else {
+                            alert('검색된 데이터가 없습니다.');
                         }
-                        target_closingPrice.data = closingPrice;
-                        target_volume.data = volume;
-                        target_sympath.data = sympathy;
-                        target_unsympathy.data = unsympathy;
-                        target_socre.data = score;
-                        target_views.data = views;
-                        this.series.push(target_closingPrice);
-                        this.series.push(target_volume);
-                        this.series.push(target_sympath);
-                        this.series.push(target_unsympathy);
-                        this.series.push(target_socre);
-                        this.series.push(target_views);
-                        this.$set(this.chartOptions, 'labels', date);
-                    } else {
-                        alert('검색된 데이터가 없습니다.');
-                    }
-                });
+                    });
+                }
             }
         },
         components: {
