@@ -14,7 +14,7 @@
             <div class="collapse navbar-collapse dropdown show" id="navbarResponsive" ref="dropdownMenu">
                 <div class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item">
-                        <div class="dropdown show">
+                        <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                                id="introServiceMenuLink" aria-haspopup="true" aria-expanded="false" style="font-size: medium">서비스 개요</a>
                             <div class="dropdown-menu" aria-labelledby="introServiceMenuLink">
@@ -28,7 +28,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <div class="dropdown show">
+                        <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                                id="serviceReqMenuLink" aria-haspopup="true" aria-expanded="false" style="font-size: medium">서비스 신청</a>
                             <div class="dropdown-menu" aria-labelledby="serviceReqMenuLink">
@@ -62,7 +62,7 @@
 <!--                        </div>-->
 <!--                    </li>-->
                     <li class="nav-item">
-                        <div class="dropdown show">
+                        <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                                id="issueMenuLink" aria-haspopup="true" aria-expanded="false" style="font-size: medium">이슈 파인더</a>
                             <div class="dropdown-menu" aria-labelledby="issueMenuLink">
@@ -75,7 +75,7 @@
                             </div>
                         </div>
                     <li class="nav-item">
-                        <div class="dropdown show">
+                        <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                                id="myMenuLink" aria-haspopup="true" aria-expanded="false" style="font-size: medium" v-if="logIn">마이 페이지</a>
                             <a class="nav-link" href="#" id="logInLink" style="font-size: medium" v-if="!logIn">
