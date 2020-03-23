@@ -24,6 +24,7 @@ module.exports = {
         template: './src/index.html'
     })],
     devServer: {
+        disableHostCheck: true ,
         historyApiFallback: true,
         host: "127.0.0.1" // default : 127.0.0.1
     },
