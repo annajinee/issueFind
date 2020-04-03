@@ -18,7 +18,6 @@ function getChartInfo(eventname) {
         return response;
     });
 }
-
 function handleResponse(response) {
     return response.text().then(text => {
         const data = text;

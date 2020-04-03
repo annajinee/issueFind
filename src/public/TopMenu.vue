@@ -145,4 +145,7 @@
     .dropdown-menu{
         border: none;
     }
+    .collapse:not(.show) {
+        display: none;
+    }
 </style>

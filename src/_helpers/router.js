@@ -42,11 +42,11 @@ export const router = new Router({
     { path: '/issue/hot', component: HotIssuePage }, //핫이슈등록
     { path: '/issue/industry', component: IndustryIssuePage }, //산업별이슈
     { path: '/notfound', component: NotFoundPage }, //산업별이슈
-
-
     // otherwise redirect to home
     { path: '*', redirect: '/' , component: HomePage}
-  ]
+  ],
+  // 페이지 이동 시 상단으로 이동
+  scrollBehavior (to, from, savedPosition) { if (savedPosition) { return savedPosition } else { return { x: 0, y: 0 } } }
 });
 
 router.beforeEach((to, from, next) => {
