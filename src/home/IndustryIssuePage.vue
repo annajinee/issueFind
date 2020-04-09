@@ -357,6 +357,28 @@
                         }
                     ]
                 },
+                stockInfo: {
+                    code: '',
+                    open: 0,
+                    high: 0,
+                    low: 0,
+                    close: 0,
+                    name:'',
+                    volume: 0,
+                    volMoney: 0,
+                    highest52: 0,
+                    lowest52: 0,
+                    foreignRation:0,
+                    totalPrice:0,
+                    faceValue:0,
+                    listedStocks:0,
+                    per:0.0,
+                    pbr:0.0,
+                    eps:0,
+                    bps:0,
+                    industry:'',
+                    dividendRate: 0, 
+                },
             }
         },
         methods: {
@@ -441,8 +463,23 @@
                             alert('검색된 데이터가 없습니다.');
                         }
                     });
+                    this.getStockInfo(eventname);
+                  
                 }
-            }
+            },
+            getStockInfo(code){
+                if(!code){
+                    alert('종목명 or 종목코드를 입력하세요');
+                    return;
+                }else{
+                  let dataObj = chartService.getStockInfo(code).then(response => {
+                     let obj = JSON.parse(response);
+                     console.log(" obj => ", obj);    
+                  });
+                  console.log(" dataObj => ", dataObj);
+                }
+            },
+
         },
         components: {
             MixedChart,
