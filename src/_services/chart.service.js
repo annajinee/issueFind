@@ -14,7 +14,8 @@ function getChartInfo(eventname) {
     //예 : 083660
     console.log('eventname:'+eventname);
 
-    return fetch(`${config.apiUrl}/api/stock/`+eventname, requestOptions).then(handleResponse).then(response => {
+    return fetch(`${config.apiUrl}/api/stock/`+eventname+`/highlow`, requestOptions).then(handleResponse).then(response => {
+         console.log(response);
         return response;
     });
 }

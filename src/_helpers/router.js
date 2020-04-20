@@ -38,7 +38,7 @@ export const router = new Router({
     { path: '/share/profit', component: ShareProfitPage }, //수익인증
     { path: '/qna', component: QnaPage }, //Q&A
     { path: '/request/qna', component: RequestQnaPage }, //상담신청
-    { path: '/auth/issue/realtime/', component: RealTimeIssuePage }, //실시간이슈-유료
+    { path: '/auth/issue/realtime/', component: RealTimeIssuePage}, //실시간이슈-유료
     { path: '/issue/hot', component: HotIssuePage }, //핫이슈등록
     { path: '/issue/industry', component: IndustryIssuePage }, //산업별이슈
     { path: '/notfound', component: NotFoundPage }, //산업별이슈
@@ -55,6 +55,7 @@ router.beforeEach((to, from, next) => {
   const authRequired = to.path.includes(publicPages);
   const loggedIn = localStorage.getItem('user');
   console.log('logginIn:'+loggedIn);
+  // 로그인 필요 메뉴
   // if (authRequired && !loggedIn) {
   //   return next('/login');
   // }

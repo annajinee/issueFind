@@ -7,7 +7,7 @@
                     <img class="mt-1" src="img/portfolio/quantimg/bi_width.png" style="width: 45%"/>
                     <hr class="divider my-4">
                     <input type="checkbox" name="chk_agree_all" v-model="chk_agree_all" @click="checkedAll()">&nbsp; <p
-                        class="font-weight-bold d-inline">전체 동의</p>
+                        class="font-weight-bold d-inline text-danger">전체 동의</p>
                     <p class="mt-2"><u>이용약관, 개인정보 수집 및 이용, 프로모션 안내 문자수신(선택)에 모두 동의합니다</u></p>
                     <br/>
                     <input type="checkbox" name="chk_agree_service" class="mb-3" v-model="chk_agree_service">&nbsp; <p
@@ -2040,7 +2040,7 @@ mso-font-kerning:0pt'>최소한의 정보 외 개인정보 수집에 동의하�
                     <br/>
                     <input type="checkbox" name="chk_agree_marketing" class="mb-3" v-model="chk_agree_marketing">&nbsp;
                     <p
-                            class="font-weight-bold d-inline">마케딩 정보 수신동의(선택)</p>
+                            class="font-weight-bold d-inline">마케팅 정보 수신동의(선택)</p>
                     <br/>
                     <div style="overflow:scroll; width:100%; height:250px;" class="bg-transparent border">
 
@@ -2199,9 +2199,15 @@ color:#666666;mso-font-kerning:0pt'>※ 위의 개인정보 <span class=SpellE>�
                 }
             },
             checkedAll() {
-                this.chk_agree_service = true;
-                this.chk_agree_marketing = true;
-                this.chk_agree_privacy = true;
+                if (!this.chk_agree_all) {
+                    this.chk_agree_service = true;
+                    this.chk_agree_marketing = true;
+                    this.chk_agree_privacy = true;
+                } else {
+                    this.chk_agree_service = false;
+                    this.chk_agree_marketing = false;
+                    this.chk_agree_privacy = false;
+                }
             }
         }
     }
