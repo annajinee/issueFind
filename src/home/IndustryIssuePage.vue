@@ -185,7 +185,6 @@
                                 data.y = y_data;
                                 console.log('obj:'+data.toString());
                                 resultArr.push(data);
-                                // this.series.data.push(data);
                             }
                             this.$set(this.series[0], 'data', resultArr);
 

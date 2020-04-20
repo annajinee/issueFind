@@ -1,7 +1,9 @@
 import config from 'config';
 
 export const chartService = {
-    getChartInfo
+    getChartInfo,
+    getStockInfo,
+    
     // getCompanyInfo,
     // serchCompanyInfo
 };
@@ -30,4 +32,26 @@ function handleResponse(response) {
         console.log(data);
         return data;
     });
+}
+
+function getStockInfo(code){
+    const requestOptions = {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json'}
+    };
+    //예 : 083660
+    console.log('url  => '+ `${config.apiUrl}/api/stock/`+code+'/highlow');
+
+    return fetch(`${config.apiUrl}/api/stock/`+code+'/highlow', requestOptions).then(handleResponse);
+}
+
+function getStockMasterInfo(code){
+    const requestOptions = {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json'}
+    };
+    let selectiveMaster = "";
+    let masterUrl = "https://sandbox-apigw.koscom.co.kr/v2/market/stocks/"+marketCode+"/"+stockCode+"/selectiveMaste?"+selectiveMaster;
+
+    return fetch(masterUrl, requestOptions).then(handleResponse);
 }

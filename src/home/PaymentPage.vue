@@ -16,7 +16,8 @@
         <mq-layout mq="tablet">
             <img src="img/portfolio/service/m-salebanner.png" style="width: 100%"/>
         </mq-layout>
-        <div class="container text-center">
+        <div class="container">
+            <div class="text-center">
             <mq-layout mq="laptop">
                 <h2 class="d-inline-block text-danger">매일 <h1 class="mt-3 font-weight-bold color-red d-inline-block">
                     3,950원</h1>으로 최대 수익률을 기록하라!
@@ -28,6 +29,7 @@
                 </h2>
             </mq-layout>
             <p class="text-dark">(1년 상품 할인가 기준)</p>
+            </div>
             <mq-layout mq="laptop">
                 <table class="table table-bordered text-center mt-5 font-weight-bold bg-light">
                     <thead>
@@ -212,6 +214,40 @@
                     </tbody>
                 </table>
             </mq-layout>
+            <div class="mt-5"></div>
+            <div class="col-sm-2 mt-5"><p class="font-weight-bold">상품선택창</p></div>
+            <div class="row  mt-3">
+                <div class="col-md-9">
+                    <select class="form-control font-weight-bold" v-model="product">
+                        <option disabled value="">상품을 선택해주세요</option>
+                        <option value="240,000">1개월 (기간제 상품)</option>
+                        <option value="936,000">6개월 (기간제 상품)</option>
+                        <option value="1,440,000">1년 (기간제 상품)</option>
+                    </select>
+                </div>
+                <div class="col-md-3 form-control bg-light">
+                    <h6><span>결제금액 <h5 class="font-weight-bold d-lg-inline-block">{{ product }}</h5> 원</span></h6>
+                </div>
+            </div>
+            <div class="col-md-2 mt-3"><p class="font-weight-bold">결제정보</p></div>
+            <div class="row  mt-3">
+                <div class="col-md-12">
+                    <div class="form-control">
+                    <div class="form-check form-check-inline w-25">
+                        <input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample">
+                        <label class="form-check-label" for="materialInline1">신용 카드(개인)</label>
+                    </div>
+                    <div class="form-check form-check-inline w-25">
+                        <input type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample">
+                        <label class="form-check-label" for="materialInline2">실시간 계좌이체</label>
+                    </div>
+                    <div class="form-check form-check-inline w-25">
+                        <input type="radio" class="form-check-input" id="materialInline3" name="inlineMaterialRadiosExample">
+                        <label class="form-check-label" for="materialInline3">무통장 입금</label>
+                    </div>
+                </div>
+            </div>
+            </div>
             <div class="text-center mt-5">
                 <button class="btn btn-warning btn-lg js-scroll-trigger col-md-4 font-weight-bolder">
                     <router-link to="/notfound" class="btn-warning">할인가로 결제하기</router-link></button>
@@ -225,6 +261,11 @@
     import Vue from "vue";
 
     export default {
+        data() {
+            return {
+                product: 0
+            }
+        },
         components: {
             vueMq: VueMq
         }

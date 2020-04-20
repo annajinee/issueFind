@@ -11,7 +11,7 @@
                     aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse dropdown show" id="navbarResponsive" ref="dropdownMenu">
+            <div class="collapse navbar-collapse dropdown" id="navbarResponsive" ref="dropdownMenu">
                 <div class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item">
                         <div class="dropdown">
@@ -144,5 +144,8 @@
     }
     .dropdown-menu{
         border: none;
+    }
+    .collapse:not(.show) {
+        display: none;
     }
 </style>
