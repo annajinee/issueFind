@@ -12,7 +12,7 @@
   "dependencies": {
     "@chenfengyuan/vue-carousel": "^1.0.3",
     "@fortawesome/fontawesome-free": "5.10.2",
-    "apexcharts": "^3.15.5",
+    "apexcharts": "^3.24.0",
     "bootstrap": "4.3.1",
     "jquery": "3.4.1",
     "jquery.easing": "^1.4.1",
